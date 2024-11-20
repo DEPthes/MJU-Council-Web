@@ -7,6 +7,5 @@ const Home = () => {
 export default Home;
 
 const TEST = styled.div`
-  color: var(--White);
   font: var(--BodyText);
 `;

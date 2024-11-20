@@ -37,8 +37,8 @@
 :root {
   --White: #ffffff;
   --Black: #000000;
-  --MainBlue: #002a68;
-  --SubBlue: #0087d1;
+  --Primary: #002a68;
+  --Secondary: #0087d1;
   --M5: #f2f4f7;
   --M30: #b2bfd2;
   --M50: #8094b3;
@@ -83,7 +83,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

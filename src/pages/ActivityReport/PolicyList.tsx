@@ -1,10 +1,7 @@
+import * as S from "@styles/ActivityReport/PolicyList/PolicyListPage";
 
 const PolicyList = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <S.Container></S.Container>;
 };
 
 export default PolicyList;

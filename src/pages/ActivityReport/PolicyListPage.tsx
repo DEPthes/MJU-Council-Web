@@ -3,7 +3,7 @@ import PolicyListTab from "@/components/ActivityReport/PolicyList/PolicyListTab"
 import * as S from "@/styles/ActivityReport/PolicyList/PolicyListPageStyle";
 import { useState } from "react";
 
-const PolicyList = () => {
+const PolicyListPage = () => {
   const tabList = ["권리", "교육", "복지 문화", "소통", "취업", "시설"];
   const [tab, setTab] = useState<(typeof tabList)[number]>(tabList[0]);
 
@@ -19,4 +19,4 @@ const PolicyList = () => {
   );
 };
 
-export default PolicyList;
+export default PolicyListPage;

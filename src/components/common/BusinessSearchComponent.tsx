@@ -1,7 +1,7 @@
 import { Search } from "@/assets/common";
-import * as S from "@styles/ActivityReport/BusinessList/BusinessSearchComponentStyle";
+import * as S from "@/styles/common/SearchComponentStyle";
 
-const BusinessSearchComponent = () => {
+const SearchComponent = () => {
   return (
     <S.Container>
       <S.SearchBar />
@@ -12,4 +12,4 @@ const BusinessSearchComponent = () => {
   );
 };
 
-export default BusinessSearchComponent;
+export default SearchComponent;

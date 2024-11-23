@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px 0px;
+  padding: 40px 20px;
   width: 100%;
+  box-sizing: border-box;
   border-bottom: 1px solid var(--M5);
 `;
 export const titleContainer = styled.div`

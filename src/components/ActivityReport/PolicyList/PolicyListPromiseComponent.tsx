@@ -1,4 +1,4 @@
-import { Arrow } from "@/assets/ActivityReport";
+import { Arrow } from "@/assets/common";
 import { fulfillments } from "@/constants/ActivityReport/PolicyList";
 import { FulfillmentType } from "@/types/ActivityReport/PolicyList";
 import { getFulfillmentRate } from "@/utils/ActivitiyReport";

@@ -1,4 +1,4 @@
-import { Search } from "@/assets/ActivityReport";
+import { Search } from "@/assets/common";
 import * as S from "@styles/ActivityReport/BusinessList/BusinessSearchComponentStyle";
 
 const BusinessSearchComponent = () => {

@@ -1,4 +1,4 @@
-import { PageDoubleIcon, PageIcon } from "@/assets/ActivityReport";
+import { PageDoubleIcon, PageIcon } from "@/assets/common";
 import * as S from "@styles/ActivityReport/BusinessList/BusinessListPageComponentStyle";
 import React from "react";
 import { useSearchParams } from "react-router-dom";

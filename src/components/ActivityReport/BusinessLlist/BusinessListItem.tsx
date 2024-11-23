@@ -6,6 +6,7 @@ interface BusinessListItemProps {
   Author: string;
   date: string;
   isEnd: boolean;
+  onClick: () => void;
 }
 
 const BusinessListItem: React.FC<BusinessListItemProps> = ({
@@ -13,9 +14,10 @@ const BusinessListItem: React.FC<BusinessListItemProps> = ({
   Author,
   date,
   isEnd,
+  onClick,
 }) => {
   return (
-    <S.Container $isEnd={isEnd}>
+    <S.Container $isEnd={isEnd} onClick={onClick}>
       <S.Title>{title}</S.Title>
       <S.AuthorContainer>
         <div>{Author}</div> <div>{date}</div>

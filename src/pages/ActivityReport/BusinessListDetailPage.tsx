@@ -1,10 +1,11 @@
 import ActivityReportHeader from "@/components/ActivityReport/ActivityReportHeader";
 import BusinessDetailComponent from "@/components/ActivityReport/BusinessDetail/BusinessDetailComponent";
 import * as S from "@styles/ActivityReport/BusinessDetail/BusinessListDetailPageStyle";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const BusinessListDetailPage = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
   const dummyAuthor = "총학생회";
   const dummyDate = "2024.11.09";
   const subText = `${dummyAuthor} | ${dummyDate}`;

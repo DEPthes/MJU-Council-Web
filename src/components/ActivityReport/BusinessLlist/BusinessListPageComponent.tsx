@@ -9,22 +9,34 @@ const BusinessListPageComponent: React.FC = () => {
 
   const handleNextPage = () => {
     const nextPage = Number(page) + 1;
-    setSearchParams({ page: nextPage.toString() });
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      page: nextPage.toString(),
+    });
   };
 
   const handlePreviousPage = () => {
     const previousPage = Math.max(1, Number(page) - 1);
-    setSearchParams({ page: previousPage.toString() });
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      page: previousPage.toString(),
+    });
   };
 
   const handleNextTenPages = () => {
-    const nextPage = Math.min(Number(page) + 10, totalPage); // totalPage를 초과하지 않도록 제한
-    setSearchParams({ page: nextPage.toString() });
+    const nextPage = Math.min(Number(page) + 10, totalPage);
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      page: nextPage.toString(),
+    });
   };
 
   const handlePreviousTenPages = () => {
-    const previousPage = Math.max(1, Number(page) - 10); // 1 미만으로 내려가지 않도록 제한
-    setSearchParams({ page: previousPage.toString() });
+    const previousPage = Math.max(1, Number(page) - 10);
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      page: previousPage.toString(),
+    });
   };
 
   const totalPage = 15;

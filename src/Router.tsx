@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BusinessListDetailPage from "./pages/ActivityReport/BusinessListDetailPage";
 import BusinessListPage from "./pages/ActivityReport/BusinessListPage";
+import BusinessSearchResultPage from "./pages/ActivityReport/BusinessSearchResultPage";
 import PolicyListPage from "./pages/ActivityReport/PolicyListPage";
 import Home from "./pages/Home";
 
@@ -18,6 +19,10 @@ const Router = () => {
         <Route
           path="/activityReport/businessListDetail/:id"
           element={<BusinessListDetailPage />}
+        />
+        <Route
+          path="/activityReport/businessSearchResult/"
+          element={<BusinessSearchResultPage />}
         />
 
         {/* </Route> */}

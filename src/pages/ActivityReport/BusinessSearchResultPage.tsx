@@ -5,9 +5,8 @@ import * as S from "@styles/ActivityReport/BusinessSearchResult/BusinessSearchRe
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const BusinessSearchResultPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const search = searchParams.get("search") || "";
-  const page = searchParams.get("page") || "1";
 
   const navigator = useNavigate();
 
@@ -80,7 +79,10 @@ const BusinessSearchResultPage = () => {
 
   return (
     <S.Container>
-      <SearchComponent route={`/activityReport/businessSearchResult`} />
+      <SearchComponent
+        route={`/activityReport/businessSearchResult`}
+        value={search}
+      />
       {randerComponent()}
     </S.Container>
   );

@@ -1,10 +1,10 @@
 import ActivityReportHeader from "@/components/ActivityReport/ActivityReportHeader";
 import BusinessDetailComponent from "@/components/ActivityReport/BusinessDetail/BusinessDetailComponent";
+import GoListButton from "@/components/common/GoListButton";
 import * as S from "@styles/ActivityReport/BusinessDetail/BusinessListDetailPageStyle";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const BusinessListDetailPage = () => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const dummyAuthor = "총학생회";
   const dummyDate = "2024.11.09";
@@ -13,9 +13,7 @@ const BusinessListDetailPage = () => {
     <S.Container>
       <ActivityReportHeader text={"Title"} subText={subText} />
       <BusinessDetailComponent />
-      <S.ButtonContainer onClick={() => navigate(-1)}>
-        <S.GoListButton>목록으로</S.GoListButton>
-      </S.ButtonContainer>
+      <GoListButton />
     </S.Container>
   );
 };

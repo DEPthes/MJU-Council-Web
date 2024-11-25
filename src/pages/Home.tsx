@@ -33,5 +33,6 @@ const MainPage = styled.div`
 export default Home;
 
 
-
-
+const TEST = styled.div`
+  font: var(--BodyText);
+`;

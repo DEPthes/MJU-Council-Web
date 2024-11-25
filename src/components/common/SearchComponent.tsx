@@ -5,10 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 interface SearchComponentProps {
   route: string;
-  value: string;
 }
 
-const SearchComponent: React.FC<SearchComponentProps> = ({ route, value }) => {
+const SearchComponent: React.FC<SearchComponentProps> = ({ route }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState<string>("");
 
@@ -22,7 +21,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ route, value }) => {
 
   return (
     <S.Container>
-      <S.SearchBar type="text" value={value} onChange={handleSearchChange} />
+      <S.SearchBar type="text" value={search} onChange={handleSearchChange} />
       <S.SearchIconContainer onClick={handleSearchSubmit}>
         <Search />
       </S.SearchIconContainer>

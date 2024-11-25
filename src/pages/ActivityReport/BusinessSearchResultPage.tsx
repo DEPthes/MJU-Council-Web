@@ -1,5 +1,5 @@
 import BusinessListItem from "@/components/ActivityReport/BusinessLlist/BusinessListItem";
-import BusinessListPageComponent from "@/components/ActivityReport/BusinessLlist/BusinessListPageComponent";
+import PageComponent from "@/components/common/PageComponent";
 import SearchComponent from "@/components/common/SearchComponent";
 import * as S from "@styles/ActivityReport/BusinessSearchResult/BusinessSearchResultStyle";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -68,7 +68,7 @@ const BusinessSearchResultPage = () => {
                 />
               ))}
             </S.BusinessContainer>
-            <BusinessListPageComponent />
+            <PageComponent />
           </>
         );
 
@@ -79,10 +79,7 @@ const BusinessSearchResultPage = () => {
 
   return (
     <S.Container>
-      <SearchComponent
-        route={`/activityReport/businessSearchResult`}
-        value={search}
-      />
+      <SearchComponent route={`/activityReport/businessSearchResult`} />
       {randerComponent()}
     </S.Container>
   );

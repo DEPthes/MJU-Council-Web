@@ -1,5 +1,5 @@
 import BusinessListComponent from "@/components/ActivityReport/BusinessLlist/BusinessListComponent";
-import BusinessListPageComponent from "@/components/ActivityReport/BusinessLlist/BusinessListPageComponent";
+import PageComponent from "@/components/common/PageComponent";
 import SearchComponent from "@/components/common/SearchComponent";
 import * as S from "@styles/ActivityReport/BusinessList/BusinessListPageStyle";
 
@@ -8,7 +8,7 @@ const BusinessListPage = () => {
     <S.Container>
       <SearchComponent route={`/activityReport/businessSearchResult`} />
       <BusinessListComponent />
-      <BusinessListPageComponent />
+      <PageComponent />
     </S.Container>
   );
 };

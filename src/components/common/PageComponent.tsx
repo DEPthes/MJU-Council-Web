@@ -3,7 +3,7 @@ import * as S from "@styles/ActivityReport/BusinessList/BusinessListPageComponen
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 
-const BusinessListPageComponent: React.FC = () => {
+const PageComponent: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get("page") || "1";
 
@@ -83,4 +83,4 @@ const BusinessListPageComponent: React.FC = () => {
   );
 };
 
-export default BusinessListPageComponent;
+export default PageComponent;

@@ -49,7 +49,8 @@ const CouncilText = styled.p`
     font-family: "Noto Sans KR";
     font-size: 16px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
+    line-height:32px;
 `;
 
 const Menu = styled.button`

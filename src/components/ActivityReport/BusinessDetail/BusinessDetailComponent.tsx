@@ -1,25 +1,16 @@
-import { Attachment } from "@/assets/common";
+import FileButton from "@/components/common/FileButton";
 import * as S from "@styles/ActivityReport/BusinessDetail/BusinessDetailComponentStyle";
 
 const BusinessDetailComponent = () => {
   const fileUrl = "TEST";
   const fileName = "TEST";
-  const handleDownload = () => {
-    const a = document.createElement("a");
-    a.href = fileUrl;
-    a.download = fileName;
-    a.click();
-  };
 
   return (
     <S.Container>
       <S.Text>
         aiejf;aiwjf;awojf;awoihf;ajksdnflakjebf;awefl;a;efa;wiuefhalwgiuaw;efiahwg;iaojfg;aldifja;liugha;dfiahdlgiuah;
       </S.Text>
-      <S.FileContainer onClick={handleDownload}>
-        <Attachment />
-        <S.FileText>{fileName}</S.FileText>
-      </S.FileContainer>
+      <FileButton fileUrl={fileUrl} fileName={fileName} />
     </S.Container>
   );
 };

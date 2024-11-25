@@ -1,8 +1,7 @@
 import * as S from "@styles/ActivityReport/CoalitionDetail/CoalitionDetailComponentStyle";
-import { useParams } from "react-router-dom";
 
 const CoalitionDetailComponent = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   const text = "aweiofja;ewfhjoajf";
   return (

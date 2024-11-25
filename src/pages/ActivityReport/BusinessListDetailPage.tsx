@@ -2,10 +2,9 @@ import ActivityReportHeader from "@/components/ActivityReport/ActivityReportHead
 import BusinessDetailComponent from "@/components/ActivityReport/BusinessDetail/BusinessDetailComponent";
 import GoListButton from "@/components/common/GoListButton";
 import * as S from "@styles/ActivityReport/BusinessDetail/BusinessListDetailPageStyle";
-import { useParams } from "react-router-dom";
 
 const BusinessListDetailPage = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   const dummyAuthor = "총학생회";
   const dummyDate = "2024.11.09";
   const subText = `${dummyAuthor} | ${dummyDate}`;

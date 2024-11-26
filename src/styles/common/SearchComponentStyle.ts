@@ -4,10 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0px;
-  height: 40px;
+  height: 120px;
   width: 100%;
-  margin: 40px 20px;
+  padding: 40px 20px;
 `;
 
 export const SearchBar = styled.input`
@@ -15,9 +14,8 @@ export const SearchBar = styled.input`
   background-color: var(--M5);
   border-radius: 4px 0 0 4px;
   border: 1px solid var(--M50);
-  width: calc(100% - 80px);
+  width: 100%;
   height: 100%;
-  box-sizing: border-box;
   padding: 4px 20px;
   color: var(--Black);
   font: var(--HeaderTitle);

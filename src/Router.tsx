@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PolicyList from "./pages/ActivityReport/PolicyList";
-import Home from "./pages/Home";
+import Home from "./pages/MainPage/Home";
 
 const Router = () => {
   return (

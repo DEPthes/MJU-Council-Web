@@ -1,4 +1,4 @@
-import * as S from "../../styles/Home/HomeCategoryComponentStyle";
+import * as S from "../../styles/Home/Component/HomeCategoryComponentStyle";
 
 import Bulb from "../../assets/image/Bulb.svg";
 import Comment from "../../assets/image/Comment.svg";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-    width: 390px;
+    width: 100vw;
     height: 60px;
     display: flex;
     justify-content:center;
@@ -13,7 +13,7 @@ export const Logo = styled.img`
     height: 35px;
     display:flex;
     align-items:center;
-    margin-left: 20px
+    margin-left: 20px;
 `;
 
 export const Bar = styled.img`

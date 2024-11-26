@@ -1,4 +1,4 @@
-import * as S from "../../styles/Home/NavBarComponentStyle";
+import * as S from "../../styles/Home/Component/NavBarComponentStyle";
 import nav_logo from "../../assets/image/Nav_logo.svg";
 import div_bar from "../../assets/image/Div_bar.svg";
 import Menu_bar from "../../assets/image/Menu.svg";

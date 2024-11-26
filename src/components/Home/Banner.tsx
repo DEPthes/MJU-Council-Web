@@ -1,7 +1,7 @@
-import * as S from "../../styles/Home/BannerComponentStyle";
+import * as S from "../../styles/Home/Component/BannerComponentStyle";
 
-import ShowBn from "../../assets/image/Rectangle 34625295.svg";
-import NShowBn from "../../assets/image/Rectangle 34625296.svg";
+import ShowBn from "../../assets/image/Rectangle 34625295.png";
+import NShowBn from "../../assets/image/Rectangle 34625296.png";
 import Arrow from "../../assets/image/Arrow.svg";
 import dummy from "../../assets/banner_dummy.json";
 
@@ -45,7 +45,7 @@ const Banner = () => {
                     </S.Btn>
                 </S.Div>
                 <S.Slide>
-                    <S.CurrentBar src={ShowBn}/><S.Bar src={NShowBn} style={{transform: 'translateX(-0.7px)'}}/><S.Bar src={NShowBn} style={{transform: 'translateX(-1.3px)'}}/><S.Bar src={NShowBn}/>
+                    <S.CurrentBar src={ShowBn}/><S.Bar src={NShowBn}/><S.Bar src={NShowBn}/><S.Bar src={NShowBn}/>
                 </S.Slide>
             </>
         );
@@ -60,7 +60,7 @@ const Banner = () => {
                     </S.Btn>
                 </S.Div>
                 <S.Slide>
-                    <S.Bar src={NShowBn} style={{transform: 'translateX(-0.7px)'}}/><S.CurrentBar src={ShowBn} style={{transform: 'translateX(-0.7px)'}}/><S.Bar src={NShowBn} style={{transform: 'translateX(-1.5px)'}}/><S.Bar src={NShowBn}/>
+                    <S.Bar src={NShowBn} /><S.CurrentBar src={ShowBn}/><S.Bar src={NShowBn} /><S.Bar src={NShowBn}/>
                 </S.Slide>
             </>
         );
@@ -75,7 +75,7 @@ const Banner = () => {
                     </S.Btn>
                 </S.Div>
                 <S.Slide>
-                    <S.Bar src={NShowBn} style={{transform: 'translateX(-0.7px)'}}/><S.Bar src={NShowBn} style={{transform: 'translateX(-1.3px)'}}/><S.CurrentBar src={ShowBn} style={{transform: 'translateX(-1.2px)'}}/><S.Bar src={NShowBn}/>
+                    <S.Bar src={NShowBn}/><S.Bar src={NShowBn}/><S.CurrentBar src={ShowBn} /><S.Bar src={NShowBn}/>
                 </S.Slide>
             </>
         );
@@ -90,7 +90,7 @@ const Banner = () => {
                     </S.Btn>
                 </S.Div>
                 <S.Slide>
-                    <S.Bar src={NShowBn} style={{transform: 'translateX(-0.7px)'}}/><S.Bar src={NShowBn} style={{transform: 'translateX(-1.3px)'}}/><S.Bar src={NShowBn} style={{transform: 'translateX(-2px)'}}/><S.CurrentBar src={ShowBn} style={{transform: 'translateX(-2px)'}}/>
+                    <S.Bar src={NShowBn} /><S.Bar src={NShowBn} /><S.Bar src={NShowBn} /><S.CurrentBar src={ShowBn} />
                 </S.Slide>
             </>
         );

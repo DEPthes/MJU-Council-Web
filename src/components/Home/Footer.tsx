@@ -1,4 +1,4 @@
-import * as S from "../../styles/Home/FooterComponentStyle";
+import * as S from "../../styles/Home/Component/FooterComponentStyle";
 
 import Instagram from "../../assets/image/Instagram.svg";
 import KakaoTalk from "../../assets/image/KakaoTalk.svg";

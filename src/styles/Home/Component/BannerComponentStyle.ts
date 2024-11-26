@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-    background-color: pink;
+    background-color: white;
     display: flex;
-    width: 390px;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,11 @@ export const Div = styled.div`
 `;
 
 export const Img = styled.img`
-    width: 390px;
+    display:flex;
+    width: 100vw;
     height: 390px;
+    object-fit: cover;
+    object-position: center;
     flex-shrink: 0;
 `;
 
@@ -24,17 +27,22 @@ export const Slide = styled.div`
 `;
 export const Bar = styled.img`
     display:flex;
-    flex: 1 0 0;
+    width: 25%;
     height:8px;
-    transform: translateX(-2px);
     margin:0;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
 `;
 
 export const CurrentBar = styled.img`
     display:flex;
-    flex: 1 0 0;
+    width: 25%;
     height:8px;
     margin:0;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
 `;
 
 export const Btn = styled.button`

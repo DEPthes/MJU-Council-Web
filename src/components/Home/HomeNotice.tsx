@@ -1,9 +1,9 @@
-import * as S from "../../styles/Home/HomeNoticeComponentStyle";
+import * as S from "../../styles/Home/Component/HomeNoticeComponentStyle";
 import { useEffect, useState } from "react";
 
 import Add from "../../assets/image/Add.svg";
 import Line from "../../assets/image/Line 19.svg";
-import Line2 from "../../assets/image/Line 24.svg";
+import Line2 from "../../assets/image/Line 24.png";
 import dummyData from "../../assets/home_dummy.json";
 
 interface Notice{

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Div = styled.div`
     display:flex;
     flex-direction: column;
+    justify-content: center;
     margin:0 20px 40px 20px;
 `;
 
@@ -32,7 +33,11 @@ export const Img = styled.button`
 export const Bar = styled.img`
     display:flex;
     margin:14px 0 12px 0;
-    height:1px;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
 `;
 
 export const ContentAll = styled.div`
@@ -71,6 +76,9 @@ export const ContentDate = styled.p`
 export const ContentLine = styled.img`
     display: flex;
     margin: 12px 0;
-    width: 326px;
-    height:1px;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
 `;

@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## 🌏Summary
+## 🌏 Summary
 >  
 
 ## ✔️ Task & Description

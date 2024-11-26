@@ -5,7 +5,7 @@ import BusinessSearchResultPage from "./pages/ActivityReport/BusinessSearchResul
 import CoalitionDetailPage from "./pages/ActivityReport/CoalitionDetailPage";
 import CoalitionPage from "./pages/ActivityReport/CoalitionPage";
 import PolicyListPage from "./pages/ActivityReport/PolicyListPage";
-import Home from "./pages/Home";
+import Home from "./pages/MainPage/Home";
 
 const Router = () => {
   return (

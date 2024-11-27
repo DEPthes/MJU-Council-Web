@@ -17,5 +17,6 @@ export const GoListButton = styled.button`
   height: 40px;
   width: 100px;
   margin-top: 40px;
+  margin-bottom: 60px;
   border-radius: 2px;
 `;

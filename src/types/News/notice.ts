@@ -13,3 +13,28 @@ export type NoticeListItem = {
   title: string;
   createdDate: string;
 };
+
+export type NoticeDetail = {
+  check: boolean;
+  information: {
+    noticeResponse: {
+      title: string;
+      content: string;
+      createdDate: string;
+      images: NoticeDetailImage[];
+      files: NoticeDetailFile[];
+    };
+  };
+};
+
+export type NoticeDetailImage = {
+  imageId: number;
+  imageName: string;
+  imageUrl: string;
+};
+
+export type NoticeDetailFile = {
+  fileId: number;
+  fileName: string;
+  fileUrl: string;
+};

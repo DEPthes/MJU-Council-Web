@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   height: 120px;
   width: 100%;
+  box-sizing: border-box;
   padding: 40px 20px;
 `;
 
@@ -19,6 +20,7 @@ export const SearchBar = styled.input`
   padding: 4px 20px;
   color: var(--Black);
   font: var(--HeaderTitle);
+  box-sizing: border-box;
 `;
 
 export const SearchIconContainer = styled.div`

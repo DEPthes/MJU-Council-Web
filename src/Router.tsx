@@ -7,18 +7,17 @@ import CoalitionDetailPage from "./pages/ActivityReport/CoalitionDetailPage";
 import CoalitionPage from "./pages/ActivityReport/CoalitionPage";
 import PolicyListPage from "./pages/ActivityReport/PolicyListPage";
 import Home from "./pages/MainPage/Home";
-import NoticeListPage from "./pages/News/NoticeListPage";
-import NoticeListDetailPage from "./pages/News/NoticeListDetailPage";
-import EventListPage from "./pages/News/EventListPage";
 import EventListDetailPage from "./pages/News/EventListDetailPage";
 import EventListGuideDetailPage from "./pages/News/EventListGuideDetailPage";
+import EventListPage from "./pages/News/EventListPage";
+import NoticeListDetailPage from "./pages/News/NoticeListDetailPage";
+import NoticeListPage from "./pages/News/NoticeListPage";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          {/* <Route element={<Layout />}> */}
           <Route path="/" element={<Home />} />
           <Route
             path="/activityReport/policyList"

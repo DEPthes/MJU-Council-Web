@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 40px 20px;
+  border-bottom: 1px solid var(--M5);
 
   > hr {
     width: 24px;

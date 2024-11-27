@@ -12,6 +12,10 @@ import EventListGuideDetailPage from "./pages/News/EventListGuideDetailPage";
 import EventListPage from "./pages/News/EventListPage";
 import NoticeListDetailPage from "./pages/News/NoticeListDetailPage";
 import NoticeListPage from "./pages/News/NoticeListPage";
+import MinutesListPage from "./pages/Document/MinutesListPage";
+import MinutesListDetailPage from "./pages/Document/MinutesListDetailPage";
+import RegulationsListPage from "./pages/Document/RegulationsListPage";
+import RegulationsListDetailPage from "./pages/Document/RegulationsListDetailPage";
 
 const Router = () => {
   return (
@@ -47,6 +51,19 @@ const Router = () => {
           <Route
             path="/news/event/guide/:id"
             element={<EventListGuideDetailPage />}
+          />
+          <Route path="/document/minutes" element={<MinutesListPage />} />
+          <Route
+            path="/document/minutes/:id"
+            element={<MinutesListDetailPage />}
+          />
+          <Route
+            path="/document/regulations"
+            element={<RegulationsListPage />}
+          />
+          <Route
+            path="/document/regulations/:id"
+            element={<RegulationsListDetailPage />}
           />
           {/* </Route> */}
         </Routes>

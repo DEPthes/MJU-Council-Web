@@ -21,6 +21,7 @@ export const Button = styled.button`
     margin: 0 6px;
     border-radius: 4px;
     background-color: white;
+    border: transparent;
 `;
 
 export const Text = styled.p`

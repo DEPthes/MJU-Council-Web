@@ -28,6 +28,7 @@ export const Img = styled.button`
     width:24px;
     height:24px;
     background-color:transparent;
+    border: transparent;
 `;
 
 export const Bar = styled.img`
@@ -43,25 +44,29 @@ export const Bar = styled.img`
 export const ContentAll = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 16px 12px 16px 12px;
+    padding: 4px 12px;
     background: var(--M5);
 `;
 
 export const Content = styled.div`
-    
 `;
 
-export const TitleData = styled.div`
+export const TitleData = styled.div<{num:number}>`
     display: flex;
     flex-direction: row;
     align-items: center;
+    ${({num})=>
+        num !== 4 &&
+        `
+        border-bottom: 1px solid var(--M30);
+    `}
+    padding: 12px 0;
 `;
 
 export const ContentTitle = styled.p`
     display:flex;
     color: var(--Black);
     font: var(--ListTitle);
-    margin:0;
     cursor:pointer;
 `;
 
@@ -71,14 +76,4 @@ export const ContentDate = styled.p`
     font: var(--Caption);
     margin:0;
     margin-left: auto;
-`;
-
-export const ContentLine = styled.img`
-    display: flex;
-    margin: 12px 0;
-    width: 100%;
-    height: 1px;
-    object-fit: cover;
-    object-position: center;
-    flex-shrink: 0;
 `;

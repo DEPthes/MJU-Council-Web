@@ -5,5 +5,5 @@ export const MainPage = styled.div`
   flex-direction: column;
   justify-content:center;
   max-width: 440px;
-  margin:0;
+  margin:0 auto;
 `;

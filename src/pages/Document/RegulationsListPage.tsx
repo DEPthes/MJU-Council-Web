@@ -43,7 +43,7 @@ const RegulationsListPage = () => {
             title={item.title}
             date={item.date.replaceAll("-", ".")}
             fileUrl={item.fileUrl}
-            onClick={() => navigate(`/document/minutes/${item.id}`)}
+            onClick={() => navigate(`/document/regulations/${item.id}`)}
           />
         );
       })}

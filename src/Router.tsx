@@ -7,6 +7,7 @@ import CoalitionDetailPage from "./pages/ActivityReport/CoalitionDetailPage";
 import CoalitionPage from "./pages/ActivityReport/CoalitionPage";
 import PolicyListPage from "./pages/ActivityReport/PolicyListPage";
 import Home from "./pages/MainPage/Home";
+import NoticeListPage from "./pages/News/NoticeListPage";
 
 const Router = () => {
   return (
@@ -36,6 +37,7 @@ const Router = () => {
             path="/activityReport/coalitionDetail/:id"
             element={<CoalitionDetailPage />}
           />
+          <Route path="/news/notice" element={<NoticeListPage />} />
           {/* </Route> */}
         </Routes>
       </Layout>

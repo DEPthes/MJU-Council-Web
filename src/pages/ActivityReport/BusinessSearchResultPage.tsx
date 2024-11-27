@@ -68,7 +68,7 @@ const BusinessSearchResultPage = () => {
                 />
               ))}
             </S.BusinessContainer>
-            <PageComponent />
+            <PageComponent totalPage={10} />
           </>
         );
 

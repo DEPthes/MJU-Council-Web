@@ -1,8 +1,8 @@
 import { ImageResponse, FileResponse } from "@/types/common";
-import * as S from "@styles/News/NoticeDetailContentStyle";
+import * as S from "@styles/News/DetailContentStyle";
 import FileButton from "../common/FileButton";
 
-const NoticeDetailContent = ({
+const DetailContent = ({
   images,
   content,
   files,
@@ -36,4 +36,4 @@ const NoticeDetailContent = ({
   );
 };
 
-export default NoticeDetailContent;
+export default DetailContent;

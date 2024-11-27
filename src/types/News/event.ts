@@ -1,4 +1,4 @@
-import { ImageResponse } from "../common";
+import { FileResponse, ImageResponse } from "../common";
 
 export type EventListDetail = {
   check: boolean;
@@ -20,4 +20,18 @@ export type GuideListResponse = {
   cover: string;
   title: string;
   createdDate: string;
+};
+
+export type EventGuideDetail = {
+  check: boolean;
+  information: {
+    eventGuideResponse: {
+      guideId: number;
+      title: string;
+      content: string;
+      createdDate: string;
+      images: ImageResponse[];
+      files: FileResponse[];
+    };
+  };
 };

@@ -1,6 +1,6 @@
 import GoListButton from "@/components/common/GoListButton";
-import NoticeDetailContent from "@/components/News/NoticeDetailContent";
-import NoticeDetailHeader from "@/components/News/NoticeDetailHeader";
+import DetailContent from "@/components/News/DetailContent";
+import DetailHeader from "@/components/common/DetailHeader";
 
 const NoticeListDetailPage = () => {
   const NoticeDetail = {
@@ -44,14 +44,14 @@ const NoticeListDetailPage = () => {
 
   return (
     <div>
-      <NoticeDetailHeader
+      <DetailHeader
         title={NoticeDetail.information.noticeResponse.title}
         date={NoticeDetail.information.noticeResponse.createdDate.replaceAll(
           "-",
           "."
         )}
       />
-      <NoticeDetailContent
+      <DetailContent
         images={NoticeDetail.information.noticeResponse.images}
         content={NoticeDetail.information.noticeResponse.content}
         files={NoticeDetail.information.noticeResponse.files}

@@ -1,12 +1,11 @@
 import { Home, Interface } from "@/assets/common";
-import { parseUrlToArray } from "@/utils/parseUrlToArray";
 import * as S from "@styles/common/IndicatorStyle";
-import { useLocation } from "react-router-dom";
 
-const Indicator = () => {
-  const location = useLocation();
+interface IndicatorProps {
+  urlList: string[];
+}
 
-  const urlList = parseUrlToArray(location.pathname);
+const Indicator: React.FC<IndicatorProps> = ({ urlList }) => {
   //홈 화면에서는 띄우지 않기
   if (urlList.length == 0) return;
   return (

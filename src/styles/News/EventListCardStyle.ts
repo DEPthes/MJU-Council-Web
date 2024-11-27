@@ -10,6 +10,7 @@ export const Container = styled.div`
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 4px;
+    cursor: pointer;
   }
 `;
 

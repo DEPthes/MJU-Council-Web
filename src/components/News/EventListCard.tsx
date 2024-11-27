@@ -11,7 +11,7 @@ type Props = {
 const EventListCard = ({ cover, title, date, onClick }: Props) => {
   return (
     <S.Container>
-      <img src={cover} />
+      <img src={cover} onClick={onClick} />
       <S.TextWrap onClick={onClick}>
         <S.TitleWrap>
           <h1>{title.length < 13 ? title : `${title.slice(0, 12)}...`}</h1>

@@ -1,4 +1,4 @@
-import * as S from "@styles/News/EventListCardStyle";
+import * as S from "@/styles/News/EventListCardStyle";
 import EventArrowIcon from "@assets/image/EventArrow.svg?react";
 
 type Props = {

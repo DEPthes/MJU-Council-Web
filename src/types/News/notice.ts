@@ -1,4 +1,4 @@
-import { PageResponse } from "../page";
+import { FileResponse, ImageResponse, PageResponse } from "../common";
 
 export type NoticeList = {
   check: boolean;
@@ -21,20 +21,8 @@ export type NoticeDetail = {
       title: string;
       content: string;
       createdDate: string;
-      images: NoticeDetailImage[];
-      files: NoticeDetailFile[];
+      images: ImageResponse[];
+      files: FileResponse[];
     };
   };
-};
-
-export type NoticeDetailImage = {
-  imageId: number;
-  imageName: string;
-  imageUrl: string;
-};
-
-export type NoticeDetailFile = {
-  fileId: number;
-  fileName: string;
-  fileUrl: string;
 };

@@ -10,6 +10,7 @@ import Home from "./pages/MainPage/Home";
 import NoticeListPage from "./pages/News/NoticeListPage";
 import NoticeListDetailPage from "./pages/News/NoticeListDetailPage";
 import EventListPage from "./pages/News/EventListPage";
+import EventListDetailPage from "./pages/News/EventListDetailPage";
 
 const Router = () => {
   return (
@@ -42,6 +43,7 @@ const Router = () => {
           <Route path="/news/notice" element={<NoticeListPage />} />
           <Route path="/news/notice/:id" element={<NoticeListDetailPage />} />
           <Route path="/news/event" element={<EventListPage />} />
+          <Route path="/news/event/:id" element={<EventListDetailPage />} />
           {/* </Route> */}
         </Routes>
       </Layout>

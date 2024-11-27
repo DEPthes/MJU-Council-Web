@@ -1,4 +1,4 @@
-import { NoticeDetailFile, NoticeDetailImage } from "@/types/News/notice";
+import { ImageResponse, FileResponse } from "@/types/common";
 import * as S from "@styles/News/NoticeDetailContentStyle";
 import FileButton from "../common/FileButton";
 
@@ -7,9 +7,9 @@ const NoticeDetailContent = ({
   content,
   files,
 }: {
-  images: NoticeDetailImage[];
+  images: ImageResponse[];
   content: string;
-  files: NoticeDetailFile[];
+  files: FileResponse[];
 }) => {
   return (
     <S.Container>

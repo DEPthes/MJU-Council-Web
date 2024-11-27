@@ -1,14 +1,13 @@
 import { PageDoubleIcon, PageIcon } from "@/assets/common";
 import * as S from "@styles/ActivityReport/BusinessList/BusinessListPageComponentStyle";
-import React from "react";
 import { useSearchParams } from "react-router-dom";
 
-const PageComponent: React.FC = () => {
+const PageComponent = ({ totalPage }: { totalPage: number }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get("page") || "1";
 
   const handleNextPage = () => {
-    const nextPage = Number(page) + 1;
+    const nextPage = Math.min(Number(page) + 1, totalPage);
     setSearchParams({
       ...Object.fromEntries(searchParams),
       page: nextPage.toString(),
@@ -38,8 +37,6 @@ const PageComponent: React.FC = () => {
       page: previousPage.toString(),
     });
   };
-
-  const totalPage = 15;
 
   return (
     <S.Container>

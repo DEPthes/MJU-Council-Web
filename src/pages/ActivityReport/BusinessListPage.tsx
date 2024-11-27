@@ -8,7 +8,7 @@ const BusinessListPage = () => {
     <S.Container>
       <SearchComponent route={`/activityReport/businessSearchResult`} />
       <BusinessListComponent />
-      <PageComponent />
+      <PageComponent totalPage={15} />
     </S.Container>
   );
 };

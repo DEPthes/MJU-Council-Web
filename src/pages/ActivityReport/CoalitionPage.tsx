@@ -43,7 +43,7 @@ const CoalitionPage = () => {
         ))}
       </S.ItemContainer>
 
-      <PageComponent />
+      <PageComponent totalPage={15} />
     </S.Container>
   );
 };

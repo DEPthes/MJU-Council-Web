@@ -5,11 +5,11 @@ export const Container = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin: 40px 0 60px;
   gap: 12px;
 `;
 
-export const PageButtonContainer = styled.div<{ $isactive: boolean }>`
+export const PageButtonContainer = styled.button<{ $isactive: boolean }>`
   width: 24px;
   height: 24px;
   background-color: ${(props) =>
@@ -18,6 +18,7 @@ export const PageButtonContainer = styled.div<{ $isactive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 `;
 
 export const PageText = styled.p`

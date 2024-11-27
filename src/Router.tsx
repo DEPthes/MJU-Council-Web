@@ -7,6 +7,11 @@ import CoalitionDetailPage from "./pages/ActivityReport/CoalitionDetailPage";
 import CoalitionPage from "./pages/ActivityReport/CoalitionPage";
 import PolicyListPage from "./pages/ActivityReport/PolicyListPage";
 import Home from "./pages/MainPage/Home";
+import NoticeListPage from "./pages/News/NoticeListPage";
+import NoticeListDetailPage from "./pages/News/NoticeListDetailPage";
+import EventListPage from "./pages/News/EventListPage";
+import EventListDetailPage from "./pages/News/EventListDetailPage";
+import EventListGuideDetailPage from "./pages/News/EventListGuideDetailPage";
 
 const Router = () => {
   return (
@@ -35,6 +40,14 @@ const Router = () => {
           <Route
             path="/activityReport/coalitionDetail/:id"
             element={<CoalitionDetailPage />}
+          />
+          <Route path="/news/notice" element={<NoticeListPage />} />
+          <Route path="/news/notice/:id" element={<NoticeListDetailPage />} />
+          <Route path="/news/event" element={<EventListPage />} />
+          <Route path="/news/event/:id" element={<EventListDetailPage />} />
+          <Route
+            path="/news/event/guide/:id"
+            element={<EventListGuideDetailPage />}
           />
           {/* </Route> */}
         </Routes>

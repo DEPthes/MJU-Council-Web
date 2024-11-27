@@ -16,7 +16,6 @@ export const Container = styled.div`
 export const BannerContainer = styled.div`
   display: flex;
   width: 100%;
-  height: fit-content;
   align-items: center;
   justify-content: center;
   position: relative;

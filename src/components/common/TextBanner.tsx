@@ -12,7 +12,7 @@ const TextBanner: React.FC<TextBannerProps> = ({ urlList, isShow }) => {
   if (!isShow) return;
   return (
     <S.BannerContainer>
-      <TextBannerImage />
+      <TextBannerImage style={{ width: "100%", height: "auto" }}  />
       <S.Text>{urlList[urlList.length - 1]}</S.Text>
     </S.BannerContainer>
   );

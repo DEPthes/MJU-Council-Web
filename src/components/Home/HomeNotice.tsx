@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import Add from "../../assets/image/Add.svg";
 import Line from "../../assets/image/Line 19.svg";
-import Line2 from "../../assets/image/Line 24.png";
 import dummyData from "../../assets/home_dummy.json";
 
 interface Notice{
@@ -32,11 +31,10 @@ const HomeNotice = () => {
                 <S.ContentAll>
                     {notices.map((notice, index) => (
                     <S.Content key={index}>
-                        <S.TitleData>
+                        <S.TitleData num={index}>
                             <S.ContentTitle>{notice.title.length<16 ? notice.title : `${notice.title.slice(0, 15)}...`}</S.ContentTitle>
                             <S.ContentDate>{notice.date}</S.ContentDate>
-                        </S.TitleData>
-                        {index !== 4 && <S.ContentLine src={Line2} />}
+                        </S.TitleData >
                     </S.Content>
                     ))}
                 </S.ContentAll>

@@ -37,5 +37,6 @@ export const Menu = styled.button`
   margin-right: 20px;
   padding: 0;
   background-color: transparent;
+  border: transparent;
   cursor: pointer;
 `;

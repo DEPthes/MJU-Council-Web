@@ -13,6 +13,22 @@ export const Container = styled.div`
   overflow-x: hidden;
 `;
 
+export const BannerContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
+export const Text = styled.p`
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  color: white;
+  font: var(--SectionTitle);
+`;
+
 export const Main = styled.main`
   flex: 1;
   width: 100%;

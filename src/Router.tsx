@@ -14,6 +14,7 @@ import EventListDetailPage from "./pages/News/EventListDetailPage";
 import EventListGuideDetailPage from "./pages/News/EventListGuideDetailPage";
 import MinutesListPage from "./pages/Document/MinutesListPage";
 import MinutesListDetailPage from "./pages/Document/MinutesListDetailPage";
+import RegulationsListPage from "./pages/Document/RegulationsListPage";
 
 const Router = () => {
   return (
@@ -55,6 +56,10 @@ const Router = () => {
           <Route
             path="/document/minutes/:id"
             element={<MinutesListDetailPage />}
+          />
+          <Route
+            path="/document/regulations"
+            element={<RegulationsListPage />}
           />
           {/* </Route> */}
         </Routes>

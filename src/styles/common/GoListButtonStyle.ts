@@ -4,6 +4,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  border-top: 1px solid var(--M5);
 `;
 
 export const GoListButton = styled.button`

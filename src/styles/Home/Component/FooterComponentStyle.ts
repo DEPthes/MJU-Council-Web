@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Foot = styled.div`
     background: var(--Primary, #002A68);
     display: flex;
-    width: 100vw;
+    width: 100%;
     padding: 60px 0px;
     flex-direction: column;
     justify-content: center;
@@ -20,6 +20,7 @@ export const Button = styled.button`
     padding:4px;
     margin: 0 6px;
     border-radius: 4px;
+    background-color: white;
 `;
 
 export const Text = styled.p`

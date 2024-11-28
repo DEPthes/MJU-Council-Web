@@ -17,7 +17,7 @@ const NavBar = () => {
           <img src={Menu_bar} onClick={()=>{setOpen(!isOpen)}}/>
         </S.Menu>
       </S.Nav>
-      <SlideBar isOpen={isOpen} />
+      <SlideBar isOpen={isOpen} setIsOpen={setOpen}/>
     </>
   );
 };

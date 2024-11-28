@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   width: 100%;
+  max-width: 440px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position:fixed;
   top: 0;
+  z-index: 100;
+  background-color: white;
+  border-bottom: 1px solid var(--M30);
 `;
 
 export const Logo = styled.img`

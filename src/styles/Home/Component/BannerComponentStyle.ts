@@ -8,6 +8,7 @@ export const Div = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 60px;
   padding: 0;
 `;
 
@@ -40,7 +41,8 @@ export const ImgDiv = styled.div<{ activeSection: number }>`
 
 export const Img = styled.img`
   display: flex;
-  width: 100vw;
+  width: 100%;
+  max-width: 440px;
   height: 390px;
   object-fit: cover;
   object-position: center;

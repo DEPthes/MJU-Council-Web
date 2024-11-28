@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Div = styled.div`
+  display: flex;
+  height:60px;
+`;
 export const Nav = styled.div`
   width: 100%;
   height: 60px;

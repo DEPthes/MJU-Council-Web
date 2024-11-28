@@ -9,6 +9,7 @@ const NavBar = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
     <>
+      <S.Div></S.Div>
       <S.Nav>
         <S.Logo src={nav_logo}></S.Logo>
         <S.Bar src={div_bar}></S.Bar>

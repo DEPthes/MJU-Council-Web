@@ -16,6 +16,7 @@ import MinutesListPage from "./pages/Document/MinutesListPage";
 import MinutesListDetailPage from "./pages/Document/MinutesListDetailPage";
 import RegulationsListPage from "./pages/Document/RegulationsListPage";
 import RegulationsListDetailPage from "./pages/Document/RegulationsListDetailPage";
+import Introduction from "./pages/Introduction/IntroductionPage";
 
 const Router = () => {
   return (
@@ -23,6 +24,10 @@ const Router = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route
+            path="/introduction"
+            element={<Introduction />}
+          />
           <Route
             path="/activityReport/policyList"
             element={<PolicyListPage />}

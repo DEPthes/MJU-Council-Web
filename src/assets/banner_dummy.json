@@ -1,14 +1,18 @@
 [
     {
-        "link": "src/assets/image/Banner1.png"
+        "link": "src/assets/image/Banner1.png",
+        "content":"이미지 설명"
     },
     {
-        "link": "src/assets/image/Banner2.png"
+        "link": "src/assets/image/Banner2.png",
+        "content":"이미지 설명2"
     },
     {
-        "link": "src/assets/image/Banner3.png"
+        "link": "src/assets/image/Banner3.png",
+        "content":"이미지 설명3"
     },
     {
-        "link": "src/assets/image/Banner4.png"
+        "link": "src/assets/image/Banner4.png",
+        "content":"이미지 설명4"
     }
 ]

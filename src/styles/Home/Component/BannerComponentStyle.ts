@@ -8,7 +8,6 @@ export const Div = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 60px;
   padding: 0;
 `;
 

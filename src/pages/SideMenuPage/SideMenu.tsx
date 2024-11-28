@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import * as S from "../../styles/SideMenu/SideMenuComponentStyle";
-import {Link} from 'react-router-dom';
 
 import ArrowUp from "../../assets/image/ArrowUp.svg";
 import ArrowDown from "../../assets/image/ArrowDown.svg";

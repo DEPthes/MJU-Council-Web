@@ -42,7 +42,7 @@ export const ImgDiv = styled.div<{ activeSection: number }>`
 export const Img = styled.img`
   display: flex;
   width: 100%;
-  max-width: 440px;
+  max-width: 480px;
   height: 390px;
   object-fit: cover;
   object-position: center;

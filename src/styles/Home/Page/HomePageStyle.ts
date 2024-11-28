@@ -4,6 +4,6 @@ export const MainPage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content:center;
-  max-width: 440px;
+  max-width: 480px;
   margin:0 auto;
 `;

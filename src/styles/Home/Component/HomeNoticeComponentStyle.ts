@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Div = styled.div`
@@ -21,7 +22,7 @@ export const P = styled.p`
     margin: 0 auto 0 0;
 `;
 
-export const Img = styled.button`
+export const Img = styled(Link)`
     display:flex;
     align-items:center;
     justify-content:center;
@@ -63,11 +64,12 @@ export const TitleData = styled.div<{num:number}>`
     padding: 12px 0;
 `;
 
-export const ContentTitle = styled.p`
+export const ContentTitle = styled(Link)`
     display:flex;
     color: var(--Black);
     font: var(--ListTitle);
     cursor:pointer;
+    text-decoration: none;
 `;
 
 export const ContentDate = styled.p`

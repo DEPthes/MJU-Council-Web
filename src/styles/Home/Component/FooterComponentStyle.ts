@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Foot = styled.div`
-  background: var(--Primary, #002a68);
+  background: var(--Primary);
   display: flex;
   width: 100%;
   padding: 60px 0px;
@@ -15,7 +15,7 @@ export const Top = styled.div`
   flex-direction: row;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   padding: 4px;
   margin: 0 6px;

@@ -7,7 +7,7 @@ const StudentOrganization = () => {
 
     const A = [
         {
-            "link": "src/assets/image/Banner1.png",
+            "link": "/src/assets/image/Banner1.svg",
             "title":"ICT융합대학",
             "category": "학생회",
             "name": "제비",
@@ -15,7 +15,7 @@ const StudentOrganization = () => {
             "homePage":"/"
         },
         {
-            "link": "src/assets/image/Banner2.png",
+            "link": "/src/assets/image/Banner2.svg",
             "title":"사회과학대학",
             "category": "학생회",
             "name": "VibeOn",

@@ -25,8 +25,20 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            path="/introduction"
-            element={<Introduction />}
+            path="/introduction/introduce"
+            element={<Introduction menu="소개"/>}
+          />
+          <Route
+            path="/introduction/organization"
+            element={<Introduction menu="조직도"/>}
+          />
+          <Route
+            path="/introduction/eachpart"
+            element={<Introduction menu="국별 업무 소개"/>}
+          />
+          <Route
+            path="/introduction/centralcommitee"
+            element={<Introduction menu="중앙운영위원회"/>}
           />
           <Route
             path="/activityReport/policyList"

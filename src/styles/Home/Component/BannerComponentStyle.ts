@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Div = styled.div`
@@ -58,12 +59,13 @@ export const Btn = styled.button`
   transform: translate(-50%, 150px);
 `;
 
-export const P = styled.p`
+export const P = styled(Link)`
   display: flex;
   color: var(--M5);
   text-align: center;
   margin: 0;
   font: var(--ListTitle);
+  text-decoration: none;
 `;
 
 export const ArrowImg = styled.img`

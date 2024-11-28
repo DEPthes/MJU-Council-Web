@@ -12,6 +12,7 @@ const IntroductionContent = () => {
 
   useEffect(() => {
     setContent(dummyData);
+    console.log(dummyData.length);
   }, []);
 
   return (

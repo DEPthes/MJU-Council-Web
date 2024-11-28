@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import IntroTextBanner from "@/components/Introduction/IntroTextBanner";
-import IntroductionBtn from "../../components/Introduction/IntroductionBtn";
+import CentralCommitee from "@/components/Introduction/CentralCommitee/CentralCommitee";
 import EachPartIntroductionContent from "@/components/Introduction/EachPartIntroduction/EachPartIntroductionContent";
+import Introduction from "@/components/Introduction/Introduction";
+import IntroTextBanner from "@/components/Introduction/IntroTextBanner";
 import OrganizationContent from "@/components/Introduction/Organization/OrganizationContent";
 import TitleHead from "@/components/Introduction/TitleHead";
-import Introduction from "@/components/Introduction/Introduction";
-import CentralCommitee from "@/components/Introduction/CentralCommitee/CentralCommitee";
+import { useState } from "react";
+import IntroductionBtn from "../../components/Introduction/IntroductionBtn";
 
 const IntroductionPage = () => {
   const [activeSection, setActiveSection] = useState<string>("소개");

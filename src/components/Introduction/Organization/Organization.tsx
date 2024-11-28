@@ -1,5 +1,4 @@
 import OrganizationContent from "./OrganizationContent";
-import { useState } from "react";
 
 const IntroductionPage = () => {
 

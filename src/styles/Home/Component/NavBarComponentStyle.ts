@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   width: 100%;
-  max-width: 440px;
   height: 60px;
   display: flex;
   justify-content: center;

@@ -6,7 +6,11 @@ export const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position:fixed;
   top: 0;
+  z-index: 100;
+  background-color: white;
+  border-bottom: 1px solid var(--M30);
 `;
 
 export const Logo = styled.img`

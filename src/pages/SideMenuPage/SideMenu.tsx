@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import * as S from "../../styles/SideMenu/SideMenuComponentStyle";
 
-import ArrowUp from "../../assets/image/ArrowUp.svg";
 import ArrowDown from "../../assets/image/ArrowDown.svg";
+import ArrowUp from "../../assets/image/ArrowUp.svg";
 
 const SideBar: React.FC<{ isOpen: boolean, setIsOpen: (open: boolean) => void}> = ({isOpen, setIsOpen}) => {
   const [openCouncil, setOpenCouncil] = useState<boolean>(false);
@@ -58,7 +58,7 @@ const SideBar: React.FC<{ isOpen: boolean, setIsOpen: (open: boolean) => void}> 
               <S.ArrowImg src={openActivity? ArrowUp : ArrowDown}/>
             </S.MenuItem>
             <S.SubMenu isVisible={openActivity}>
-              <S.Div to='/activityReport/policyLis'  onClick={closeSidebar}>정책 목록</S.Div>
+              <S.Div to='/activityReport/policyList'  onClick={closeSidebar}>정책 목록</S.Div>
               <S.Div to='/activityReport/businessList'  onClick={closeSidebar}>사업 목록</S.Div>
               <S.Div to='/activityReport/coalition'  onClick={closeSidebar}>제휴 현황</S.Div>
             </S.SubMenu>

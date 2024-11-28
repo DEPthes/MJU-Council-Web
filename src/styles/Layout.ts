@@ -24,7 +24,7 @@ export const BannerContainer = styled.div`
 export const Text = styled.p`
   display: flex;
   position: absolute;
-  z-index: 100;
+  z-index: 5;
   color: white;
   font: var(--SectionTitle);
 `;

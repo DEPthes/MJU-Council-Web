@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const PageButtonContainer = styled.button<{ $isactive: boolean }>`
   width: 24px;
   height: 24px;
+  padding: 0;
   background-color: ${(props) =>
     props.$isactive ? "var(--Primary)" : "var(--M30)"};
   border-radius: 2px;

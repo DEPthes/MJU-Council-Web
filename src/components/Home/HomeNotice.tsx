@@ -25,14 +25,14 @@ const HomeNotice = () => {
             <S.Div>
                 <S.Top>
                     <S.P>공지사항</S.P>
-                    <S.Img><img src={Add}/></S.Img>
+                    <S.Img to={"/news/notice"}><img src={Add}/></S.Img>
                 </S.Top>
                 <S.Bar src={Line}/>
                 <S.ContentAll>
                     {notices.map((notice, index) => (
                     <S.Content key={index}>
                         <S.TitleData num={index}>
-                            <S.ContentTitle>{notice.title.length<16 ? notice.title : `${notice.title.slice(0, 15)}...`}</S.ContentTitle>
+                            <S.ContentTitle to={"/News/notice/:id"}>{notice.title.length<16 ? notice.title : `${notice.title.slice(0, 15)}...`}</S.ContentTitle>
                             <S.ContentDate>{notice.date}</S.ContentDate>
                         </S.TitleData >
                     </S.Content>

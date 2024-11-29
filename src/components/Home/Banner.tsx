@@ -39,7 +39,7 @@ const Banner = () => {
                     <S.Img src={banner}></S.Img>
                 </S.ImgDiv>     
                 <S.Btn>
-                    <S.P>총학생회 소개 바로가기</S.P>
+                    <S.P to={"/introduction/introduce"}>총학생회 소개 바로가기</S.P>
                     <S.ArrowImg src={Arrow}/>
                 </S.Btn>
             </S.Div>

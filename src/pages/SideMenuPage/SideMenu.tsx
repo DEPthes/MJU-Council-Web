@@ -40,10 +40,10 @@ const SideBar: React.FC<{ isOpen: boolean, setIsOpen: (open: boolean) => void}> 
               <S.ArrowImg src={openCouncil? ArrowUp : ArrowDown}/>
             </S.MenuItem>
             <S.SubMenu isVisible={openCouncil}>
-              <S.Div to='/activityReport/policyList' onClick={closeSidebar}>소개</S.Div>
-              <S.Div to='/activityReport/policyList'  onClick={closeSidebar}>조직도</S.Div>
-              <S.Div to='/activityReport/policyList'  onClick={closeSidebar}>국별 업무 소개</S.Div>
-              <S.Div to='/activityReport/policyList'  onClick={closeSidebar}>중앙운영위원회</S.Div>
+              <S.Div to='/introduction/introduce' onClick={closeSidebar}>소개</S.Div>
+              <S.Div to='/introduction/organization'  onClick={closeSidebar}>조직도</S.Div>
+              <S.Div to='/introduction/eachpart'  onClick={closeSidebar}>국별 업무 소개</S.Div>
+              <S.Div to='/introduction/centralcommitee'  onClick={closeSidebar}>중앙운영위원회</S.Div>
             </S.SubMenu>
             <S.MenuItem onClick={() => setOpenNews(!openNews)} eachMenuOpen={openNews}>
               소식

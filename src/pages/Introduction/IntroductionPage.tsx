@@ -1,14 +1,13 @@
-import CentralCommitee from "@/components/Introduction/CentralCommitee/CentralCommitee";
+import React, { useEffect, useState } from "react";
+import IntroductionBtn from "../../components/Introduction/IntroductionBtn";
 import EachPartIntroductionContent from "@/components/Introduction/EachPartIntroduction/EachPartIntroductionContent";
-import Introduction from "@/components/Introduction/Introduction";
-import IntroTextBanner from "@/components/Introduction/IntroTextBanner";
 import OrganizationContent from "@/components/Introduction/Organization/OrganizationContent";
 import TitleHead from "@/components/Introduction/TitleHead";
-import { useState } from "react";
-import IntroductionBtn from "../../components/Introduction/IntroductionBtn";
+import Introduction from "@/components/Introduction/Introduction";
+import CentralCommitee from "@/components/Introduction/CentralCommitee/CentralCommitee";
 
-const IntroductionPage = () => {
-  const [activeSection, setActiveSection] = useState<string>("소개");
+const IntroductionPage: React.FC<{menu:string}> = ({ menu }) => {
+  const [activeSection, setActiveSection] = useState<string>(menu || "소개");
 
   const renderContent = () => {
     switch (activeSection) {
@@ -25,10 +24,18 @@ const IntroductionPage = () => {
     }
   };
 
+  useEffect(() => {
+    if (menu) {
+      setActiveSection(menu);
+    }
+  }, [menu]);
+
   return (
     <>
-      <IntroTextBanner />
-      <IntroductionBtn setActiveSection={setActiveSection} activeSection={activeSection} />
+      <IntroductionBtn
+        setActiveSection={setActiveSection}
+        activeSection={activeSection}
+      />
       <TitleHead title={activeSection} />
       {renderContent()}
     </>

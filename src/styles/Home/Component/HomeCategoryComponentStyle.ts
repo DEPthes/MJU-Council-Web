@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Div = styled.div`
@@ -19,10 +20,11 @@ export const Img = styled.img`
     cursor: pointer;
 `;
 
-export const Indiv = styled.div`
+export const Indiv = styled(Link)`
     display:flex;
     flex-direction:column;
     justify-content:center;
+    text-decoration: none;
 `;
 
 export const CName = styled.p`
@@ -32,5 +34,5 @@ export const CName = styled.p`
 
     color: var(--Primary);
     text-align: center;
-    font: var(--NavigationTitle)
+    font: var(--NavigationTitle);
 `;

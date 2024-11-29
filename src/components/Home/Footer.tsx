@@ -12,10 +12,10 @@ const Footer = () => {
     <>
       <S.Foot>
         <S.Top>
-          <S.Button>
+          <S.Button href="https://www.instagram.com/mju_saero/">
             <img src={Instagram} />
           </S.Button>
-          <S.Button>
+          <S.Button href="https://pf.kakao.com/_BtYfG?fbclid=PAY2xjawG1f95leHRuA2FlbQIxMAABpoCwBfu1h_6g6gqbGlKf8X26ko8oGwQzSsTPWQOh4IaVP7EBhTRh9wg4Aw_aem_apuNHZJ5TnMzhaoFiHI46w">
             <img src={KakaoTalk} />
           </S.Button>
         </S.Top>

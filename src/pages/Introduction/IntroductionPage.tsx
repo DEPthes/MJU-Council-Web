@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import IntroTextBanner from "@/components/Introduction/IntroTextBanner";
 import IntroductionBtn from "../../components/Introduction/IntroductionBtn";
 import EachPartIntroductionContent from "@/components/Introduction/EachPartIntroduction/EachPartIntroductionContent";
 import OrganizationContent from "@/components/Introduction/Organization/OrganizationContent";
@@ -33,7 +32,6 @@ const IntroductionPage: React.FC<{menu:string}> = ({ menu }) => {
 
   return (
     <>
-      <IntroTextBanner />
       <IntroductionBtn
         setActiveSection={setActiveSection}
         activeSection={activeSection}

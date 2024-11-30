@@ -49,12 +49,16 @@ export const Category = styled.p`
     margin-right: 8px;
 `;
 
-export const Image = styled.img`
+export const Image = styled.div`
     display: flex;
     width: 100%;
     height: 220px;
-    object-fit: cover;
-    object-position: center;
+    svg {
+        width: 100%; /* 부모의 너비에 맞춤 */
+        height: 100%; /* 부모의 높이에 맞춤 */
+        object-fit: cover; /* 이미지가 부모 영역을 채우도록 */
+        object-position: center; /* 중앙에 위치 */
+    }
 `;
 
 export const Name = styled.p`

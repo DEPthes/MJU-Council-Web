@@ -31,7 +31,7 @@ const Footer = () => {
             <img src={Phone} />
           </S.Img>
           <S.Text style={{ font: "var(--Caption)", margin: "0 16px 0 0" }}>
-            02-300-09
+            02-300-0901
           </S.Text>
           <S.Img>
             <img src={Mail} />
@@ -51,7 +51,7 @@ const Footer = () => {
             margin: "40px 0 0 0",
           }}
         >
-          Copyright © 2024 MJU Student,<br></br>DEPth,All Rights Reserved
+          Copyright © 2024 MJU Student,<br></br>DEPth.All Rights Reserved
         </S.Text>
       </S.Foot>
     </>

@@ -11,7 +11,7 @@ const NavBar = () => {
     <>
       <S.Div></S.Div>
       <S.Nav>
-        <S.Logo src={nav_logo}></S.Logo>
+        <S.Logo to={"/"} onClick={()=>{setOpen(false)}}><img src={nav_logo}/></S.Logo>
         <S.Bar src={div_bar}></S.Bar>
         <S.CouncilText>총학생회</S.CouncilText>
         <S.Menu>

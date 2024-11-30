@@ -6,13 +6,13 @@ export const Div = styled.div`
     flex-direction: row;
     justify-content:center;
     margin: 40px 0;
+    width: 100%;
 `;
 
 export const Img = styled.img`
     display: flex;
     padding: 12px;
     align-items: center;
-    align-self: stretch;
     border-radius: 100px;
     border: 1px solid var(--M30);
     margin: 0 6px;
@@ -25,6 +25,7 @@ export const Indiv = styled(Link)`
     flex-direction:column;
     justify-content:center;
     text-decoration: none;
+    width: 16%;
 `;
 
 export const CName = styled.p`

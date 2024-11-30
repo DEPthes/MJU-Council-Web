@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Div = styled.div`
@@ -17,7 +18,7 @@ export const Nav = styled.div`
   border-bottom: 1px solid var(--M30);
 `;
 
-export const Logo = styled.img`
+export const Logo = styled(Link)`
   height: 35px;
   display: flex;
   align-items: center;

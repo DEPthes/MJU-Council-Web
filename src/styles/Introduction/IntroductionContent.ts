@@ -12,11 +12,6 @@ export const ImgContent = styled.div`
     margin-top: 40px;
 `;
 
-export const ICImg = styled.img`
-    display: flex;
-    width: 100%;
-`;
-
 export const ICP = styled.p`
     display: flex;
     margin-top: 16px;

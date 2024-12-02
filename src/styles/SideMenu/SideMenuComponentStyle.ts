@@ -20,7 +20,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
   position: fixed;
   top: 60px;
   right: 0;
-  width: 336px;
+  width: 86%;
   height: calc(100% - 60px);
   background-color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);

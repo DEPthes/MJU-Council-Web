@@ -24,6 +24,7 @@ const IntroductionPage: React.FC<{menu:string}> = ({ menu }) => {
     }
   };
 
+
   useEffect(() => {
     if (menu) {
       setActiveSection(menu);

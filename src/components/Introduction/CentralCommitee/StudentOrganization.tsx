@@ -2,12 +2,13 @@ import * as S from "../../../styles/Introduction/CentralCommitee/StudentOrganiza
 
 import insta from "../../../assets/image/Instagram_blue.svg";
 import home from "../../../assets/image/Home_blue.svg";
+import Banner1 from "@/assets/image/Banner1.svg?react";
+import Banner2 from "@/assets/image/Banner2.svg?react";
 
 const StudentOrganization = () => {
-
     const A = [
         {
-            "link": "/src/assets/image/Banner1.svg",
+            "link": <Banner1/>,
             "title":"ICT융합대학",
             "category": "학생회",
             "name": "제비",
@@ -15,7 +16,7 @@ const StudentOrganization = () => {
             "homePage":"/"
         },
         {
-            "link": "/src/assets/image/Banner2.svg",
+            "link": <Banner2/>,
             "title":"사회과학대학",
             "category": "학생회",
             "name": "VibeOn",
@@ -42,7 +43,7 @@ const StudentOrganization = () => {
                                 </S.SocialLinks>
                             </S.ContentDiv>
                         </S.TextDiv>
-                        <S.Image src={item.link}/>
+                        <S.Image>{item.link}</S.Image>
                     </S.SODiv>
                 ))}
             </S.All>

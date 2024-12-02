@@ -1,19 +1,30 @@
 import * as S from "../../../styles/Introduction/EachPartIntroduction/EachPartIntroductionContent";
 import { useEffect, useState } from "react";
-import dummyData from "../../../assets/banner_dummy.json";
+import Banner1 from "@/assets/image/Banner1.svg?react";
+import Banner2 from "@/assets/image/Banner2.svg?react";
+import Banner3 from "@/assets/image/Banner3.svg?react";
+import Banner4 from "@/assets/image/Banner4.svg?react";
 
 const EachPartIntroductionContent = () => {
-    const [links, setLinks] = useState<string[]>([]);
+    const [links, setLinks] = useState<{link: JSX.Element}[]>([]);
+
+    const dummy = [
+      {"link": <Banner1/>},
+      {"link": <Banner2/>},
+      {"link": <Banner3/>},
+      {"link": <Banner4/>}
+    ]
   
     useEffect(() => {
-      const extractedLinks = dummyData.map((item: { link: string }) => item.link);
-      setLinks(extractedLinks);
+      setLinks(dummy);
     }, []);
   
     return (
       <S.EPDiv>
         {links.map((link, index) => (
-          <S.EPImg key={index} src={link} style={{ marginBottom: "16px" }} />
+          <S.EPImg key={index}>
+            {link.link}
+          </S.EPImg>
         ))}
       </S.EPDiv>
     );

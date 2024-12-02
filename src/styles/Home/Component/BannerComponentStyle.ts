@@ -37,15 +37,15 @@ export const ImgDiv = styled.div<{ activeSection: number }>`
             `;
     }}
   }
+  svg{
+    width: 100%;
+    height: 390px;
+    justify-content: center;
+    aligh-items:center;
+    object-fit: cover;
+  }
 `;
 
-export const Img = styled.img`
-  display: flex;
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-  object-position: center;
-`;
 
 export const Btn = styled.button`
   display: flex;

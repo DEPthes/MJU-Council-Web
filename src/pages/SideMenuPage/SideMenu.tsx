@@ -68,7 +68,7 @@ const SideBar: React.FC<{ isOpen: boolean, setIsOpen: (open: boolean) => void}> 
             </S.MenuItem>
             <S.SubMenu isVisible={openData}>
               <S.Div to='/document/minutes'  onClick={closeSidebar}>회의록</S.Div>
-              <S.Div to='/document/regulations'  onClick={closeSidebar}>학생회칙</S.Div>
+              <S.Div to='/document/regulations'  onClick={closeSidebar}>회칙 및 세칙</S.Div>
             </S.SubMenu>
           </S.Container>
         </S.OverLay>

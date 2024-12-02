@@ -1,14 +1,36 @@
 import * as S from "../../styles/Introduction/IntroductionBtn";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface IntroductionBtnProps {
   activeSection: string;
   setActiveSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const IntroductionBtn: React.FC<IntroductionBtnProps> = ({ activeSection, setActiveSection }) => {
+const IntroductionBtn: React.FC<IntroductionBtnProps> = ({
+  activeSection,
+  setActiveSection,
+}) => {
+  const navigate = useNavigate();
+
   const handleButtonClick = (section: string) => {
-    setActiveSection(section);
+    setActiveSection(section); // 상태 업데이트
+    navigate(route(section)); // 라우팅
+  };
+
+  const route = (section: string) => {
+    switch (section) {
+      case "소개":
+        return "/introduction/introduce";
+      case "조직도":
+        return "/introduction/organization";
+      case "국별 업무 소개":
+        return "/introduction/eachpart";
+      case "중앙운영위원회":
+        return "/introduction/centralcommitee";
+      default:
+        return "/introduction/introduce";
+    }
   };
 
   return (

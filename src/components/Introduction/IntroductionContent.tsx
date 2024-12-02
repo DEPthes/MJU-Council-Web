@@ -1,14 +1,27 @@
 import * as S from "../../styles/Introduction/IntroductionContent";
 import { useEffect, useState } from "react";
-import dummyData from "../../assets/banner_dummy.json";
+
+import Banner1 from "@/assets/image/Banner1.svg?react";
+import Banner2 from "@/assets/image/Banner2.svg?react";
 
 interface Content {
-  link: string;
+  link: JSX.Element;
   content: string;
 }
 
 const IntroductionContent = () => {
   const [content, setContent] = useState<Content[]>([]);
+
+  const dummyData = [
+    {
+        "link": <Banner1 width={"100%"}/>,
+        "content":"이미지 설명1"
+    },
+    {
+        "link": <Banner2 width={"100%"}/>,
+        "content":"이미지 설명2"
+    }
+]
 
   useEffect(() => {
     setContent(dummyData);
@@ -18,7 +31,7 @@ const IntroductionContent = () => {
     <S.ICDiv>
       {content.map((item, index) => (
         <S.ImgContent key={index} style={{ marginBottom: "16px" }}>
-          <S.ICImg src={item.link}/>
+          {item.link}
           <S.ICP>{item.content}</S.ICP>
         </S.ImgContent>
       ))}

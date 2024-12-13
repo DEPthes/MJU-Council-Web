@@ -10,7 +10,7 @@ type Props = {
 const EventListGuideCard = ({ cover, title, date, onClick }: Props) => {
   return (
     <S.Container onClick={onClick}>
-      <img src={cover} />
+      <img src={cover} loading="lazy" />
       <h3>{title.length < 13 ? title : `${title.slice(0, 12)}...`}</h3>
       <p>{date}</p>
     </S.Container>

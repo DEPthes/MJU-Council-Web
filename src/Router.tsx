@@ -26,19 +26,19 @@ const Router = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="/introduction/introduce"
-            element={<Introduction menu="소개"/>}
+            element={<Introduction menu="소개" />}
           />
           <Route
             path="/introduction/organization"
-            element={<Introduction menu="조직도"/>}
+            element={<Introduction menu="조직도" />}
           />
           <Route
             path="/introduction/eachpart"
-            element={<Introduction menu="국별 업무 소개"/>}
+            element={<Introduction menu="국별 업무 소개" />}
           />
           <Route
             path="/introduction/centralcommitee"
-            element={<Introduction menu="중앙운영위원회"/>}
+            element={<Introduction menu="중앙운영위원회" />}
           />
           <Route
             path="/activityReport/policyList"
@@ -66,7 +66,7 @@ const Router = () => {
           <Route path="/news/event" element={<EventListPage />} />
           <Route path="/news/event/:id" element={<EventListDetailPage />} />
           <Route
-            path="/news/event/guide/:id"
+            path="/news/event/:id/:guideId"
             element={<EventListGuideDetailPage />}
           />
           <Route path="/document/minutes" element={<MinutesListPage />} />

@@ -38,13 +38,13 @@ const IntroductionBtn: React.FC<IntroductionBtnProps> = ({
       <S.Container>
         <S.Div style={{ marginTop: "0", marginBottom: "2px" }}>
           <S.IntroBtn
-            isActive={activeSection === "소개"}
+            isactive={activeSection === "소개"?"true":"false"}
             onClick={() => handleButtonClick("소개")}
           >
             소개
           </S.IntroBtn>
           <S.IntroBtn
-            isActive={activeSection === "조직도"}
+            isactive={activeSection === "조직도"?"true":"false"}
             onClick={() => handleButtonClick("조직도")}
           >
             조직도
@@ -52,13 +52,13 @@ const IntroductionBtn: React.FC<IntroductionBtnProps> = ({
         </S.Div>
         <S.Div>
           <S.IntroBtn
-            isActive={activeSection === "국별 업무 소개"}
+            isactive={activeSection === "국별 업무 소개"?"true":"false"}
             onClick={() => handleButtonClick("국별 업무 소개")}
           >
             국별 업무 소개
           </S.IntroBtn>
           <S.IntroBtn
-            isActive={activeSection === "중앙운영위원회"}
+            isactive={activeSection === "중앙운영위원회"?"true":"false"}
             onClick={() => handleButtonClick("중앙운영위원회")}
           >
             중앙운영위원회

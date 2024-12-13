@@ -66,7 +66,7 @@ const Router = () => {
           <Route path="/news/event" element={<EventListPage />} />
           <Route path="/news/event/:id" element={<EventListDetailPage />} />
           <Route
-            path="/news/event/guide/:id"
+            path="/news/event/:id/:guideId"
             element={<EventListGuideDetailPage />}
           />
           <Route path="/document/minutes" element={<MinutesListPage />} />

@@ -1,29 +1,23 @@
 import { Arrow } from "@/assets/common";
 import { fulfillments } from "@/constants/ActivityReport/PolicyList";
-import { FulfillmentType } from "@/types/ActivityReport/PolicyList";
+import { Promise } from "@/types/ActivityReport/PolicyList";
 import { getFulfillmentRate } from "@/utils/ActivitiyReport";
 import * as S from "@styles/ActivityReport/PolicyList/PolicyListPromiseComponentStyle";
 import React, { useState } from "react";
 
 interface PolicyListPromiseComponentProps {
-  index: number;
-  title: string;
-  fulfillment: FulfillmentType;
-  content: string;
+  item: Promise;
 }
 
 const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
-  index,
-  title,
-  fulfillment,
-  content,
+  item,
 }) => {
   const [isShowContent, setIsShowContent] = useState<boolean>(false);
   return (
     <S.Container>
       <S.titleContainer>
         <S.Title>
-          {index}. {title}
+          {item.id}. {item.title}
         </S.Title>
         <Arrow
           stroke="var(--Primary)"
@@ -34,19 +28,23 @@ const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
         />
       </S.titleContainer>
       <S.barBackground>
-        <S.bar progress={getFulfillmentRate(fulfillment)} />
+        <S.bar progress={getFulfillmentRate(item.progress)} />
       </S.barBackground>
       <S.dotContainer>
         {fulfillments.map((fulfillmentItem) => (
           <S.fulfillmentTextContainer>
-            <S.dot $selected={fulfillment === fulfillmentItem} />
-            <S.fulfillmentText $selected={fulfillment === fulfillmentItem}>
+            <S.dot
+              $selected={fulfillments[item.progress] === fulfillmentItem}
+            />
+            <S.fulfillmentText
+              $selected={fulfillments[item.progress] === fulfillmentItem}
+            >
               {fulfillmentItem}
             </S.fulfillmentText>
           </S.fulfillmentTextContainer>
         ))}
       </S.dotContainer>
-      {isShowContent && <S.Content>{content}</S.Content>}
+      {isShowContent && <S.Content>{item.content}</S.Content>}
     </S.Container>
   );
 };

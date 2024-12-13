@@ -3,7 +3,7 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import { getNotices } from "@apis/notice";
+import { getNotices } from "@/apis/notice";
 import { NoticeList } from "@/types/News/notice";
 
 export function useNotices(

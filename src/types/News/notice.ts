@@ -1,4 +1,4 @@
-import { FileResponse, ImageResponse } from "../common";
+import { ImageFileResponse } from "../common";
 
 export type NoticeList = {
   check: boolean;
@@ -19,12 +19,10 @@ export type NoticeListItem = {
 export type NoticeDetail = {
   check: boolean;
   information: {
-    noticeResponse: {
-      title: string;
-      content: string;
-      createdDate: string;
-      images: ImageResponse[];
-      files: FileResponse[];
-    };
+    title: string;
+    content: string;
+    createdAt: string;
+    images: ImageFileResponse[];
+    files: ImageFileResponse[];
   };
 };

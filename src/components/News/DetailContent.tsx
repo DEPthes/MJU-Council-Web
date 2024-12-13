@@ -1,4 +1,4 @@
-import { ImageResponse, FileResponse } from "@/types/common";
+import { ImageFileResponse } from "@/types/common";
 import * as S from "@styles/News/DetailContentStyle";
 import FileButton from "../common/FileButton";
 
@@ -7,15 +7,15 @@ const DetailContent = ({
   content,
   files,
 }: {
-  images: ImageResponse[];
+  images: ImageFileResponse[];
   content: string;
-  files: FileResponse[];
+  files: ImageFileResponse[];
 }) => {
   return (
     <S.Container>
       <S.ImageContentWrap>
         {images.map((item, index) => {
-          return <img key={index} src={item.imageUrl} />;
+          return <img key={index} src={item.url} loading="lazy" />;
         })}
         {content}
       </S.ImageContentWrap>
@@ -23,11 +23,7 @@ const DetailContent = ({
         <S.FileWrap>
           {files.map((item, index) => {
             return (
-              <FileButton
-                key={index}
-                fileUrl={item.fileUrl}
-                fileName={item.fileName}
-              />
+              <FileButton key={index} fileUrl={item.url} fileName={item.name} />
             );
           })}
         </S.FileWrap>

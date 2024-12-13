@@ -1,17 +1,19 @@
-import { FileResponse, ImageResponse, PageResponse } from "../common";
+import { FileResponse, ImageResponse } from "../common";
 
 export type NoticeList = {
   check: boolean;
   information: {
-    pageResponse: PageResponse;
-    noticeList: NoticeListItem[];
+    totalPage: number;
+    pageSize: number;
+    totalElements: number;
+    contents: NoticeListItem[];
   };
 };
 
 export type NoticeListItem = {
   noticeId: number;
   title: string;
-  createdDate: string;
+  createdAt: string;
 };
 
 export type NoticeDetail = {

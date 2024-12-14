@@ -1,38 +1,40 @@
 import * as S from "../../styles/Introduction/IntroductionContent";
 import { useEffect, useState } from "react";
 
-import Banner1 from "@/assets/image/Banner1.svg?react";
-import Banner2 from "@/assets/image/Banner2.svg?react";
+import { getIntroduce } from "@/apis/introduction";
 
 interface Content {
-  link: JSX.Element;
-  content: string;
+  imgUrl: string;
+  description: string;
 }
 
 const IntroductionContent = () => {
   const [content, setContent] = useState<Content[]>([]);
 
-  const dummyData = [
-    {
-        "link": <Banner1 width={"100%"}/>,
-        "content":"이미지 설명1"
-    },
-    {
-        "link": <Banner2 width={"100%"}/>,
-        "content":"이미지 설명2"
-    }
-]
-
   useEffect(() => {
-    setContent(dummyData);
+    const fetchData = async() => {
+      try{
+        const response = await getIntroduce();
+  
+        if(response.check){
+          setContent(response.information);
+        }else{
+          console.error("데이터를 가져오지 못했습니다."+response.message);
+        }
+      }catch(error){
+        console.log("API호출에러", error)
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <S.ICDiv>
       {content.map((item, index) => (
         <S.ImgContent key={index} style={{ marginBottom: "16px" }}>
-          {item.link}
-          <S.ICP>{item.content}</S.ICP>
+          <img src={item.imgUrl}/>
+          <S.ICP>{item.description}</S.ICP>
         </S.ImgContent>
       ))}
     </S.ICDiv>

@@ -1,43 +1,30 @@
 import DetailHeader from "@/components/common/DetailHeader";
 import GoListButton from "@/components/common/GoListButton";
-import DocumentDetailContent from "@/components/Document/DocumentDetailContent";
+import DetailContent from "@/components/News/DetailContent";
+import { useRegulationsDetail } from "@/hooks/regulations/useRegulationsDetail";
+import { useParams } from "react-router-dom";
 
 const RegulationsListDetailPage = () => {
-  const RegulationsDetail = {
-    check: true,
-    information: {
-      id: 1,
-      write: "관리자",
-      title: "회칙 및 세칙이다",
-      content: "회칙 및 세칙 내용이다",
-      date: "2024-11-17",
-      files: [
-        {
-          fileId: 1,
-          fileName: "회칙 및 세칙 파일",
-          fileUrl: "https://councill-s3-bucket/aethkefjdif.pdf",
-        },
-        {
-          fileId: 2,
-          fileName: "회칙 및 세칙 파일",
-          fileUrl: "https://councill-s3-bucket/aethkefjdif.hwp",
-        },
-      ],
-    },
-  };
+  const { id } = useParams();
+  const { data } = useRegulationsDetail(Number(id));
 
   return (
     <div>
       <DetailHeader
-        title={RegulationsDetail.information.title}
+        title={data.information.title}
         date={
           "총학생회 ┃  " +
-          RegulationsDetail.information.date.replaceAll("-", ".")
+          data.information.date.split("T")[0].replaceAll("-", ".")
         }
       />
-      <DocumentDetailContent
-        content={RegulationsDetail.information.content}
-        files={RegulationsDetail.information.files}
+      <DetailContent
+        content={data.information.content}
+        files={data.information.files.map((file) => ({
+          id: file.regulationFileId,
+          name: file.fileName,
+          url: file.fileUrl,
+        }))}
+        images={[]}
       />
       <GoListButton />
     </div>

@@ -1,4 +1,7 @@
-import { BusinessListResponse } from "@/types/ActivityReport/business";
+import {
+  BusinessDetailResponse,
+  BusinessListResponse,
+} from "@/types/ActivityReport/business";
 import axios from "axios";
 
 // 사업 목록 조회
@@ -13,6 +16,15 @@ export async function getBusinessList(
   }
 
   const response = await axios.get(url);
+
+  return response?.data;
+}
+
+// 사업 목록 상세 조회
+export async function getBusinessDetail(
+  id: number
+): Promise<BusinessDetailResponse> {
+  const response = await axios.get(`/api/v1/businesses/${id}`);
 
   return response?.data;
 }

@@ -18,3 +18,25 @@ export interface BusinessListResponse {
   information: Information;
   message: string | null;
 }
+
+// --------------------- {{ 사업 상세 조회 }} -------------------------------
+
+interface BusinessFile {
+  id: number;
+  name: string;
+  url: string;
+}
+
+export interface BusinessInformation {
+  title: string;
+  content: string;
+  createdAt: string;
+  images: BusinessFile[];
+  files: BusinessFile[];
+}
+
+export interface BusinessDetailResponse {
+  check: boolean;
+  information: BusinessInformation;
+  message: string;
+}

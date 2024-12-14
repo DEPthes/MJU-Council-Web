@@ -3,8 +3,11 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import { getBusinessList } from "@/apis/business";
-import { BusinessListResponse } from "@/types/ActivityReport/business";
+import { getBusinessDetail, getBusinessList } from "@/apis/business";
+import {
+  BusinessDetailResponse,
+  BusinessListResponse,
+} from "@/types/ActivityReport/business";
 
 interface useBusinessListProps {
   keyword?: string;
@@ -24,5 +27,14 @@ export function useBusinessList({
   return useSuspenseQuery({
     queryKey: ["GetBusiness", keyword],
     queryFn: () => getBusinessList(page, keyword),
+  });
+}
+
+export function useBusinessDetail(
+  businessId: number
+): UseSuspenseQueryResult<BusinessDetailResponse, Error> {
+  return useSuspenseQuery({
+    queryKey: ["GetBusinessDetail", businessId],
+    queryFn: () => getBusinessDetail(businessId),
   });
 }

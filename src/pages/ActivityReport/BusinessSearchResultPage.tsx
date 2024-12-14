@@ -1,7 +1,7 @@
 import BusinessListItem from "@/components/ActivityReport/BusinessLlist/BusinessListItem";
 import PageComponent from "@/components/common/PageComponent";
 import SearchComponent from "@/components/common/SearchComponent";
-import { useBusinessList } from "@/hooks/activityReport/business/useBusinessList";
+import { useBusinessList } from "@/hooks/activityReport/business/useBusiness";
 import * as S from "@styles/ActivityReport/BusinessSearchResult/BusinessSearchResultStyle";
 import { useNavigate, useSearchParams } from "react-router-dom";
 

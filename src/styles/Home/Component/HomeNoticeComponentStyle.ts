@@ -52,12 +52,12 @@ export const ContentAll = styled.div`
 export const Content = styled.div`
 `;
 
-export const TitleData = styled.div<{num:number}>`
+export const TitleData = styled.div<{$num:number}>`
     display: flex;
     flex-direction: row;
     align-items: center;
-    ${({num})=>
-        num !== 4 &&
+    ${({$num})=>
+        $num !== 4 &&
         `
         border-bottom: 1px solid var(--M30);
     `}

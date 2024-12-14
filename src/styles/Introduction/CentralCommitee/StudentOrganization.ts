@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const All = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+    justify-content: center;
 `;
 export const SODiv = styled.div`
     display: flex;
@@ -52,10 +54,10 @@ export const Category = styled.p`
 export const Image = styled.div`
     display: flex;
     width: 100%;
-    height: 220px;
-    svg {
+    // height: 220px;
+    margin: 0 auto;
+    img {
         width: 100%; /* 부모의 너비에 맞춤 */
-        height: 100%; /* 부모의 높이에 맞춤 */
         object-fit: cover; /* 이미지가 부모 영역을 채우도록 */
         object-position: center; /* 중앙에 위치 */
     }

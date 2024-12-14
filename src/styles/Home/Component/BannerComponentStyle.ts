@@ -12,7 +12,7 @@ export const Div = styled.div`
   padding: 0;
 `;
 
-export const ImgDiv = styled.div<{ activeSection: number }>`
+export const ImgDiv = styled.div<{ $activesection: number }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ export const ImgDiv = styled.div<{ activeSection: number }>`
     left: 0;
     width: 100%;
     height: 8px; /* border-bottom 높이 */
-    ${({ activeSection }) => {
+    ${({ $activesection }) => {
       const sections = [
         "linear-gradient(to right, var(--Primary) 0%, var(--Primary) 25%, var(--M30) 25%, var(--M30) 100%)",
         "linear-gradient(to right, var(--M30) 0%, var(--M30) 25%, var(--Primary) 25%, var(--Primary) 50%, var(--M30) 50%, var(--M30) 100%)",
@@ -33,7 +33,7 @@ export const ImgDiv = styled.div<{ activeSection: number }>`
         "linear-gradient(to right, var(--M30) 0%, var(--M30) 75%, var(--Primary) 75%, var(--Primary) 100%)",
       ];
       return `
-                background: ${sections[activeSection]};
+                background: ${sections[$activesection]};
             `;
     }}
   }

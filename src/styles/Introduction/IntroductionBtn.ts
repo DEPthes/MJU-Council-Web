@@ -13,7 +13,7 @@ export const Div = styled.div`
   width: 100%;
 `;
 
-export const IntroBtn = styled.button<{ isActive: boolean }>`
+export const IntroBtn = styled.button<{ $isactive: string }>`
   display: flex;
   width: 49%;
   height: 56px;
@@ -24,8 +24,8 @@ export const IntroBtn = styled.button<{ isActive: boolean }>`
   text-align: center;
   font: var(--ContentsHeader);
   margin: 0 1px;
-  background: ${({ isActive }) => (isActive ? "var(--Primary)" : "var(--M30)")};
+  background: ${({ $isactive }) => ($isactive=="true" ? `var(--Primary)` : `var(--M30)`)};
   border: transparent;
   cursor: pointer;
-  color: ${({ isActive }) => (isActive ? "white" : "var(--M70)")};
+  color: ${({ $isactive }) => ($isactive=="true" ? `white` : `var(--M70)`)};
 `;

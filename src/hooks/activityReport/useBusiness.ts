@@ -3,7 +3,10 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import { getBusinessDetail, getBusinessList } from "@/apis/business";
+import {
+  getBusinessDetail,
+  getBusinessList,
+} from "@/apis/ActivityReport/business";
 import {
   BusinessDetailResponse,
   BusinessListResponse,

@@ -1,17 +1,23 @@
+import { Image } from "@/types/ActivityReport/coalition";
 import * as S from "@styles/ActivityReport/CoalitionDetail/CoalitionDetailComponentStyle";
 
-const CoalitionDetailComponent = () => {
-  // const { id } = useParams();
+interface CoalitionDetailComponentProps {
+  text: string;
+  images: Image[];
+}
 
-  const text = "aweiofja;ewfhjoajf";
+const CoalitionDetailComponent: React.FC<CoalitionDetailComponentProps> = ({
+  text,
+  images,
+}) => {
   return (
     <S.Container>
-      <S.ImageContainer />
+      {images.map((image) => (
+        <S.ImageContainer src={image.url} key={image.id} />
+      ))}
       <S.Text>{text}</S.Text>
     </S.Container>
   );
 };
-
-// import {"hi hello"}
 
 export default CoalitionDetailComponent;

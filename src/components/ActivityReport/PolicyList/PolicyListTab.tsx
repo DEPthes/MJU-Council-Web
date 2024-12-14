@@ -1,4 +1,4 @@
-import { usePromiseCategory } from "@/hooks/activityReport/policy/usePromise";
+import { usePromiseCategory } from "@/hooks/activityReport/usePromise";
 import * as S from "@/styles/ActivityReport/PolicyList/PolicyListTabStyle";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";

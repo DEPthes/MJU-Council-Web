@@ -1,4 +1,4 @@
-import { usePromise } from "@/hooks/activityReport/policy/usePromise";
+import { usePromise } from "@/hooks/activityReport/usePromise";
 import * as S from "@styles/ActivityReport/PolicyList/PolicyListComponentStyle";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";

@@ -1,7 +1,7 @@
 import ActivityReportHeader from "@/components/ActivityReport/ActivityReportHeader";
 import BusinessDetailComponent from "@/components/ActivityReport/BusinessDetail/BusinessDetailComponent";
 import GoListButton from "@/components/common/GoListButton";
-import { useBusinessDetail } from "@/hooks/activityReport/business/useBusiness";
+import { useBusinessDetail } from "@/hooks/activityReport/useBusiness";
 import * as S from "@styles/ActivityReport/BusinessDetail/BusinessListDetailPageStyle";
 import { useParams } from "react-router-dom";
 

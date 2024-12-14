@@ -16,7 +16,7 @@ const MinutesListPage = () => {
   const [search, setSearch] = useState(initialSearch);
   const [page, setPage] = useState(initialPage);
 
-  const { data } = useMinutes(page);
+  const { data } = useMinutes(page, search);
 
   useEffect(() => {
     setSearch(initialSearch);

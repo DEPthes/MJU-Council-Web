@@ -2,8 +2,13 @@ import { MinutesDetail, MinutesList } from "@/types/Document/minutes";
 import axios from "axios";
 
 // 회의록 전체 조회
-export async function getMinutes(page: number): Promise<MinutesList> {
-  const response = await axios.get(`/api/v1/minutes?page=${page}&size=10`);
+export async function getMinutes(
+  page: number,
+  keyword: string
+): Promise<MinutesList> {
+  const response = await axios.get(
+    `/api/v1/minutes?page=${page}&size=10&keyword=${keyword}`
+  );
 
   return response?.data;
 }

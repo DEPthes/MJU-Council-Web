@@ -1,12 +1,5 @@
 import { fulfillments } from "@/constants/ActivityReport/PolicyList";
 
-export interface Promise {
-  id: number;
-  title: string;
-  content: string;
-  progress: number;
-}
-
 export type FulfillmentType = (typeof fulfillments)[number];
 
 // ---------------- {{ promiseCategory }} -----------------------------------
@@ -15,8 +8,22 @@ interface PromiseCategory {
   title: string;
 }
 
-export interface ResponseData {
+export interface PromiseCategoryResponse {
   check: boolean;
   information: PromiseCategory[];
+  message: string | null;
+}
+
+// ------------------- {{ Promise }} ----------------------
+export interface PromiseInformation {
+  promiseCategoryId: number;
+  title: string;
+  content: string;
+  progress: number;
+}
+
+export interface PromiseListResponse {
+  check: boolean;
+  information: PromiseInformation[];
   message: string | null;
 }

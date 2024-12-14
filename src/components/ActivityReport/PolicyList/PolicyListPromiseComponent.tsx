@@ -1,12 +1,12 @@
 import { Arrow } from "@/assets/common";
 import { fulfillments } from "@/constants/ActivityReport/PolicyList";
-import { Promise } from "@/types/ActivityReport/policy";
+import { PromiseInformation } from "@/types/ActivityReport/policy";
 import { getFulfillmentRate } from "@/utils/ActivitiyReport";
 import * as S from "@styles/ActivityReport/PolicyList/PolicyListPromiseComponentStyle";
 import React, { useState } from "react";
 
 interface PolicyListPromiseComponentProps {
-  item: Promise;
+  item: PromiseInformation;
 }
 
 const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
@@ -17,7 +17,7 @@ const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
     <S.Container>
       <S.titleContainer>
         <S.Title>
-          {item.id}. {item.title}
+          {item.promiseCategoryId}. {item.title}
         </S.Title>
         <Arrow
           stroke="var(--Primary)"

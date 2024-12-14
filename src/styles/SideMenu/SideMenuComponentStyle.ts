@@ -5,7 +5,7 @@ export const SideDiv = styled.div`
   display: flex;
 `;
 
-export const OverLay = styled.div<{isopen:string}>`
+export const OverLay = styled.div<{$isopen:string}>`
   position: fixed;
   top: 60px;
   left: 0;
@@ -13,10 +13,10 @@ export const OverLay = styled.div<{isopen:string}>`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
   z-index: 10; /* 메뉴 컨테이너 아래에 위치 */
-  display: ${({ isopen }) => (isopen=="true" ? `block` : `none`)};
+  display: ${({ $isopen }) => ($isopen=="true" ? `block` : `none`)};
 `;
 
-export const Container = styled.div<{ isopen: string }>`
+export const Container = styled.div<{ $isopen: string }>`
   position: fixed;
   top: 60px;
   right: 0;
@@ -29,18 +29,18 @@ export const Container = styled.div<{ isopen: string }>`
   overflow-y: auto;
 `;
 
-export const MenuItem = styled.div<{eachmenuopen:string}>`
+export const MenuItem = styled.div<{$eachmenuopen:string}>`
   display: flex;
   height: 48px;
   padding: 16px 20px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  flex-dircetion: row;
-  border-bottom: ${({eachmenuopen})=> eachmenuopen=="true"? ``:`1px solid var(--M30)`};
+  flex-direction: row;
+  border-bottom: ${({$eachmenuopen})=> $eachmenuopen=="true"? ``:`1px solid var(--M30)`};
   cursor: pointer;
-  background-color: ${({eachmenuopen})=> eachmenuopen=="true"? `var(--Primary)`:`var(--White)`};
-  color: ${({eachmenuopen})=> eachmenuopen=="true"? `var(--White)`:`var(--Primary)`};
+  background-color: ${({$eachmenuopen})=> $eachmenuopen=="true"? `var(--Primary)`:`var(--White)`};
+  color: ${({$eachmenuopen})=> $eachmenuopen=="true"? `var(--White)`:`var(--Primary)`};
   font: var(--MenuTitle);
   margin-right: auto;
 `;
@@ -50,8 +50,8 @@ export const ArrowImg = styled.img`
   flex-direction: row;
 `;
 
-export const SubMenu = styled.div<{ isvisible: string }>`
-  display: ${({ isvisible }) => (isvisible=="true" ? `block` : `none`)};
+export const SubMenu = styled.div<{ $isvisible: string }>`
+  display: ${({ $isvisible }) => ($isvisible=="true" ? `block` : `none`)};
   border-bottom: 1px solid var(--M30);
   background-color: var(--M5);
   padding: 8px 0;

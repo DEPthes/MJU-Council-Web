@@ -1,37 +1,41 @@
-import { FileResponse, ImageResponse } from "../common";
+import { ImageFileResponse } from "../common";
 
-export type EventListDetail = {
+export type EventList = {
   check: boolean;
   information: {
-    eventResponse: {
-      eventId: number;
-      title: string;
-      content: string;
-      startDate: string;
-      endDate: string;
-      images: ImageResponse[];
-      guideList: GuideListResponse[];
-    };
+    title: string;
+    eventId: number;
+    startDate: string;
+    endDate: string;
+    cover: string;
+  }[];
+};
+
+export type EventDetail = {
+  check: boolean;
+  information: {
+    title: string;
+    content: string;
+    startDate: string;
+    endDate: string;
+    images: ImageFileResponse[];
+    eventDetails: EventDetailResponse[];
   };
 };
 
-export type GuideListResponse = {
-  guideId: number;
-  cover: string;
+export type EventDetailResponse = {
   title: string;
-  createdDate: string;
+  createdAt: string;
+  eventDetailId: number;
+  cover: string;
 };
 
 export type EventGuideDetail = {
   check: boolean;
   information: {
-    eventGuideResponse: {
-      guideId: number;
-      title: string;
-      content: string;
-      createdDate: string;
-      images: ImageResponse[];
-      files: FileResponse[];
-    };
+    title: string;
+    content: string;
+    createdAt: string;
+    images: ImageFileResponse[];
   };
 };

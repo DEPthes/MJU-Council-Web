@@ -41,7 +41,7 @@ const Banner = () => {
     return (
         <>
             <S.Div>
-                <S.ImgDiv activesection={num - 1}>
+                <S.ImgDiv $activesection={num - 1}>
                     {banner}
                 </S.ImgDiv>
                 <S.Btn>

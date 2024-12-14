@@ -1,8 +1,8 @@
-import { ImageResponse } from "@/types/common";
+import { ImageFileResponse } from "@/types/common";
 import * as S from "@/styles/News/EventListDetailStyle";
 
 type Props = {
-  images: ImageResponse[];
+  images: ImageFileResponse[];
   title: string;
   date: string;
   content: string;
@@ -12,7 +12,9 @@ const EventListDetail = ({ images, title, date, content }: Props) => {
   return (
     <S.Container>
       {images.map((item, index) => {
-        return <img key={index} src={item.imageUrl} alt={item.imageName} />;
+        return (
+          <img key={index} src={item.url} alt={item.name} loading="lazy" />
+        );
       })}
       <S.TextWrap>
         <h1>{title}</h1>

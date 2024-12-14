@@ -39,7 +39,7 @@ const NoticeListPage = () => {
           "{search}"에 해당하는 검색 결과를 찾을 수 없습니다.
         </S.EmptyText>
       ) : (
-        <S.EmptyText>공지사항이 비어있습니다.</S.EmptyText>
+        <S.EmptyText>공지사항이 없습니다.</S.EmptyText>
       );
     }
 

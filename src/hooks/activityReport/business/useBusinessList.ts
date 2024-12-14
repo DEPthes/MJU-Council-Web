@@ -7,7 +7,7 @@ import { getBusinessList } from "@/apis/business";
 import { BusinessListResponse } from "@/types/ActivityReport/business";
 
 interface useBusinessListProps {
-  keyword?: number;
+  keyword?: string;
   page: number;
 }
 

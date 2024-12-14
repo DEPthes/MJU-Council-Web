@@ -4,7 +4,7 @@ import axios from "axios";
 // 사업 목록 조회
 export async function getBusinessList(
   page: number,
-  keyword?: number
+  keyword?: string
 ): Promise<BusinessListResponse> {
   let url = `/api/v1/businesses?page=${page - 1}`;
 

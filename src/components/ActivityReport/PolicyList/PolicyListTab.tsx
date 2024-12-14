@@ -1,3 +1,4 @@
+import { usePromiseCategory } from "@/hooks/activityReport/policy/usePromiseCategory";
 import * as S from "@/styles/ActivityReport/PolicyList/PolicyListTabStyle";
 
 const PolicyListTab = ({
@@ -9,17 +10,19 @@ const PolicyListTab = ({
   tab: string;
   onClick: (tab: string) => void;
 }) => {
+  const { data } = usePromiseCategory();
+  const categoryList = data.information;
+
   return (
     <S.Container>
-      {tabList.map((tabItem, index) => (
-        <S.TabWrap>
+      {categoryList.map((tabItem, index) => (
+        <S.TabWrap key={tabItem.promiseCategoryId}>
           <S.TabItem
-            key={tabItem}
-            $selected={tab === tabItem}
+            $selected={tab === tabItem.title}
             $isEnd={index === tabList.length - 1}
-            onClick={() => onClick(tabItem)}
+            onClick={() => onClick(tabItem.title)}
           >
-            {tabItem}
+            {tabItem.title}
           </S.TabItem>
           {index < tabList.length - 1 && <S.Line />}
         </S.TabWrap>

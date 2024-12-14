@@ -1,6 +1,6 @@
 import { Arrow } from "@/assets/common";
 import { fulfillments } from "@/constants/ActivityReport/PolicyList";
-import { Promise } from "@/types/ActivityReport/PolicyList";
+import { Promise } from "@/types/ActivityReport/policy";
 import { getFulfillmentRate } from "@/utils/ActivitiyReport";
 import * as S from "@styles/ActivityReport/PolicyList/PolicyListPromiseComponentStyle";
 import React, { useState } from "react";
@@ -31,8 +31,8 @@ const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
         <S.bar progress={getFulfillmentRate(item.progress)} />
       </S.barBackground>
       <S.dotContainer>
-        {fulfillments.map((fulfillmentItem) => (
-          <S.fulfillmentTextContainer>
+        {fulfillments.map((fulfillmentItem, index) => (
+          <S.fulfillmentTextContainer key={index}>
             <S.dot
               $selected={fulfillments[item.progress] === fulfillmentItem}
             />

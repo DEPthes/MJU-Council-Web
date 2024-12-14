@@ -3,8 +3,14 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import { getCoalitionList } from "@/apis/ActivityReport/coalition";
-import { AllianceListResponse } from "@/types/ActivityReport/coalition";
+import {
+  getCoalitionDetail,
+  getCoalitionList,
+} from "@/apis/ActivityReport/coalition";
+import {
+  AllianceDetailResponse,
+  AllianceListResponse,
+} from "@/types/ActivityReport/coalition";
 
 interface useCoalitionListProps {
   page: number;
@@ -19,11 +25,11 @@ export function useCoalitionList({
   });
 }
 
-// export function useBusinessDetail(
-//   businessId: number
-// ): UseSuspenseQueryResult<BusinessDetailResponse, Error> {
-//   return useSuspenseQuery({
-//     queryKey: ["GetBusinessDetail", businessId],
-//     queryFn: () => getBusinessDetail(businessId),
-//   });
-// }
+export function useCoalitionDetail(
+  allianceId: number
+): UseSuspenseQueryResult<AllianceDetailResponse, Error> {
+  return useSuspenseQuery({
+    queryKey: ["GetBusinessDetail", allianceId],
+    queryFn: () => getCoalitionDetail(allianceId),
+  });
+}

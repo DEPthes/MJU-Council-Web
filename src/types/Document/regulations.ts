@@ -8,6 +8,7 @@ export type RegulationsList = {
       regulationId: number;
       title: string;
       date: string;
+      fileUrls: string[];
     }[];
   };
 };

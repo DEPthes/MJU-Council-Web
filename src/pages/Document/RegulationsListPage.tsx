@@ -16,7 +16,7 @@ const RegulationsListPage = () => {
             index={index}
             title={item.title}
             date={item.date.split("T")[0].replaceAll("-", ".")}
-            fileUrl="수정필요"
+            fileUrl={item.fileUrls[0]}
             onClick={() =>
               navigate(`/document/regulations/${item.regulationId}`)
             }

@@ -2,15 +2,27 @@ import ActivityReportHeader from "@/components/ActivityReport/ActivityReportHead
 import CoalitionDetailComponent from "@/components/ActivityReport/CoalitionDetail/CoalitionDetailComponent";
 import FileButton from "@/components/common/FileButton";
 import GoListButton from "@/components/common/GoListButton";
+import { useCoalitionDetail } from "@/hooks/activityReport/useCoalition";
 import * as S from "@styles/ActivityReport/CoalitionDetail/CoalitionDetailPageStyle";
+import { useParams } from "react-router-dom";
 
 const CoalitionDetailPage = () => {
-  const [title, date] = ["제휴 현황 제목", "2024.11.11 ~ 2024.11.11"];
+  const { id } = useParams();
+  const { data } = useCoalitionDetail(Number(id));
+  const coalitionInfo = data.information;
+  const date = `${coalitionInfo.startDate} ~ ${coalitionInfo.endDate}`;
+  const fileList = coalitionInfo.files;
+
   return (
     <S.Container>
-      <ActivityReportHeader text={title} subText={date} />
-      <CoalitionDetailComponent />
-      <FileButton fileUrl="fad" fileName="af" />
+      <ActivityReportHeader text={coalitionInfo.title} subText={date} />
+      <CoalitionDetailComponent
+        text={coalitionInfo.content}
+        images={coalitionInfo.images}
+      />
+      {fileList.map((file) => (
+        <FileButton key={file.id} fileUrl={file.url} fileName={file.name} />
+      ))}
       <GoListButton />
     </S.Container>
   );

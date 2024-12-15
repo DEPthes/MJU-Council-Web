@@ -13,12 +13,14 @@ const DetailContent = ({
 }) => {
   return (
     <S.Container>
-      <S.ImageContentWrap>
-        {images.map((item, index) => {
-          return <img key={index} src={item.url} loading="lazy" />;
-        })}
-        {content}
-      </S.ImageContentWrap>
+      {content && (
+        <S.ImageContentWrap>
+          {images.map((item, index) => {
+            return <img key={index} src={item.url} loading="lazy" />;
+          })}
+          {content}
+        </S.ImageContentWrap>
+      )}
       {files.length > 0 && (
         <S.FileWrap>
           {files.map((item, index) => {

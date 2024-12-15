@@ -1,48 +1,29 @@
+import { Business } from "@/types/ActivityReport/business";
 import * as S from "@styles/ActivityReport/BusinessList/BusinessListComponentStyle";
 import { useNavigate } from "react-router-dom";
 import BusinessListItem from "./BusinessListItem";
 
-const BusinessListComponent = () => {
-  const businessListData = [
-    {
-      id: 1,
-      title: "Project Alpha",
-      Author: "Alice",
-      date: "2024.11.12",
-    },
-    {
-      id: 2,
-      title: "Project Beta",
-      Author: "Bob",
-      date: "2024.11.13",
-    },
-    {
-      id: 3,
-      title: "Project Gamma",
-      Author: "Charlie",
-      date: "2024.11.14",
-    },
-    {
-      id: 4,
-      title: "Project Delta",
-      Author: "David",
-      date: "2024.11.15",
-    },
-  ];
+interface BusinessListComponentProps {
+  businessListData: Business[];
+}
 
+const BusinessListComponent: React.FC<BusinessListComponentProps> = ({
+  businessListData,
+}) => {
   const navigator = useNavigate();
 
   return (
     <S.Container>
       {businessListData.map((item, index) => (
         <BusinessListItem
-          key={item.id}
+          key={item.businessId}
           title={item.title}
-          Author={item.Author}
-          date={item.date}
+          // Author={item.Author}
+          Author={"총학생회"} // 총학생회 고정인지 확인 필요
+          date={item.createdAt}
           isEnd={index >= businessListData.length - 1}
           onClick={() =>
-            navigator(`/activityReport/businessListDetail/${item.id}`)
+            navigator(`/activityReport/businessListDetail/${item.businessId}`)
           }
         />
       ))}

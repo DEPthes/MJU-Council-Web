@@ -23,12 +23,14 @@ const RegulationsListItem = ({
       </S.Title>
       <S.RightWrap>
         <p>{date}</p>
-        <FilePdfIcon
-          onClick={(e) => {
-            e.stopPropagation();
-            window.open(fileUrl, "_blank");
-          }}
-        />
+        {fileUrl && (
+          <FilePdfIcon
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(fileUrl, "_blank");
+            }}
+          />
+        )}
       </S.RightWrap>
     </S.ListItemContainer>
   );

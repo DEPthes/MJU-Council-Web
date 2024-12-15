@@ -31,7 +31,7 @@ const HomeNotice = () => {
                 <S.ContentAll>
                     {notices.map((notice, index) => (
                     <S.Content key={index}>
-                        <S.TitleData num={index}>
+                        <S.TitleData $num={index}>
                             <S.ContentTitle to={"/News/notice/:id"}>{notice.title.length<16 ? notice.title : `${notice.title.slice(0, 15)}...`}</S.ContentTitle>
                             <S.ContentDate>{notice.date}</S.ContentDate>
                         </S.TitleData >

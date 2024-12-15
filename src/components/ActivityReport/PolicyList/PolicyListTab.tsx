@@ -1,27 +1,39 @@
+import { usePromiseCategory } from "@/hooks/activityReport/usePromise";
 import * as S from "@/styles/ActivityReport/PolicyList/PolicyListTabStyle";
+import { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
-const PolicyListTab = ({
-  tabList,
-  tab,
-  onClick,
-}: {
-  tabList: string[];
-  tab: string;
-  onClick: (tab: string) => void;
-}) => {
+const PolicyListTab = () => {
+  const { data } = usePromiseCategory();
+  const categoryList = data.information;
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tab = searchParams.get("tab");
+
+  useEffect(() => {
+    if (!tab) {
+      setSearchParams({ tab: categoryList[0].title });
+    }
+  }, [searchParams, setSearchParams, tab]);
+
+  const handleClickTab = (title: string) => {
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.set("tab", title);
+    setSearchParams(updatedParams);
+  };
+
   return (
     <S.Container>
-      {tabList.map((tabItem, index) => (
-        <S.TabWrap>
+      {categoryList.map((tabItem, index) => (
+        <S.TabWrap key={tabItem.promiseCategoryId}>
           <S.TabItem
-            key={tabItem}
-            $selected={tab === tabItem}
-            $isEnd={index === tabList.length - 1}
-            onClick={() => onClick(tabItem)}
+            $selected={tab === tabItem.title}
+            $isEnd={index === categoryList.length - 1}
+            onClick={() => handleClickTab(tabItem.title)}
           >
-            {tabItem}
+            {tabItem.title}
           </S.TabItem>
-          {index < tabList.length - 1 && <S.Line />}
+          {index < categoryList.length - 1 && <S.Line />}
         </S.TabWrap>
       ))}
     </S.Container>

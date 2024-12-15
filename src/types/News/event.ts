@@ -37,5 +37,6 @@ export type EventGuideDetail = {
     content: string;
     createdAt: string;
     images: ImageFileResponse[];
+    files: ImageFileResponse[];
   };
 };

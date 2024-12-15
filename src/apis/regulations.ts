@@ -2,11 +2,11 @@ import {
   RegulationsDetail,
   RegulationsList,
 } from "@/types/Document/regulations";
-import axios from "axios";
+import { api } from ".";
 
 // 학생회칙 전체 조회
 export async function getRegulations(page: number): Promise<RegulationsList> {
-  const response = await axios.get(`/api/v1/regulations?page=${page}&size=10`);
+  const response = await api.get(`/api/v1/regulations?page=${page}&size=10`);
 
   return response?.data;
 }
@@ -49,7 +49,7 @@ export async function getAllRegulations(): Promise<RegulationsList> {
 export async function getRegulationsDetail(
   regulationsId: number
 ): Promise<RegulationsDetail> {
-  const response = await axios.get(`/api/v1/regulations/${regulationsId}`);
+  const response = await api.get(`/api/v1/regulations/${regulationsId}`);
 
   return response?.data;
 }

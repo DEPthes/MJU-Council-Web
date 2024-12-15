@@ -17,7 +17,7 @@ const EventListGuideDetailPage = () => {
       <DetailContent
         images={data.information.images}
         content={data.information.content}
-        files={[]}
+        files={data.information.files}
       />
       <GoListButton />
     </div>

@@ -52,17 +52,19 @@ export const ContentAll = styled.div`
 export const Content = styled.div`
 `;
 
-export const TitleData = styled.div<{$num:number}>`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    ${({$num})=>
-        $num !== 4 &&
-        `
-        border-bottom: 1px solid var(--M30);
-    `}
-    padding: 12px 0;
+export const TitleData = styled.div<{ $num: number; $isLast: boolean }>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+
+  ${({ $isLast }) =>
+    !$isLast &&
+    `
+    border-bottom: 1px solid var(--M30);
+  `}
 `;
+
 
 export const ContentTitle = styled(Link)`
     display:flex;

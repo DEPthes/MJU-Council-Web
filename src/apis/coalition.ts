@@ -2,7 +2,7 @@ import {
   AllianceDetailResponse,
   AllianceListResponse,
 } from "@/types/ActivityReport/coalition";
-import axios from "axios";
+import { api } from ".";
 
 // 제휴 목록 조회
 export async function getCoalitionList(
@@ -10,7 +10,7 @@ export async function getCoalitionList(
 ): Promise<AllianceListResponse> {
   let url = `/api/v1/alliances?page=${page - 1}`;
 
-  const response = await axios.get(url);
+  const response = await api.get(url);
 
   return response?.data;
 }
@@ -19,7 +19,7 @@ export async function getCoalitionList(
 export async function getCoalitionDetail(
   id: number
 ): Promise<AllianceDetailResponse> {
-  const response = await axios.get(`/api/v1/alliances/${id}`);
+  const response = await api.get(`/api/v1/alliances/${id}`);
 
   return response?.data;
 }

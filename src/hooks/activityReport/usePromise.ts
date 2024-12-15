@@ -3,7 +3,7 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import { getPromise, getPromiseCategory } from "@/apis/ActivityReport/policy";
+import { getPromise, getPromiseCategory } from "@/apis/policy";
 import {
   PromiseCategoryResponse,
   PromiseListResponse,

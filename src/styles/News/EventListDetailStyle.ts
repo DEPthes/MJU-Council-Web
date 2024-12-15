@@ -16,6 +16,7 @@ export const Container = styled.div`
     color: var(--Black);
     font: var(--SubText);
     margin-top: 20px;
+    white-space: pre-line;
   }
 `;
 

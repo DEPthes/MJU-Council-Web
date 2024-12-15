@@ -3,10 +3,7 @@ import {
   UseSuspenseQueryResult,
 } from "@tanstack/react-query";
 
-import {
-  getCoalitionDetail,
-  getCoalitionList,
-} from "@/apis/ActivityReport/coalition";
+import { getCoalitionDetail, getCoalitionList } from "@/apis/coalition";
 import {
   AllianceDetailResponse,
   AllianceListResponse,

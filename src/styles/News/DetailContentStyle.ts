@@ -9,6 +9,10 @@ export const ImageContentWrap = styled.div`
   flex-direction: column;
   gap: 40px;
   padding: 40px 0;
+
+  font: var(--BodyText);
+  color: var(--Black);
+  white-space: pre-line;
 `;
 
 export const FileWrap = styled.div`

@@ -12,7 +12,7 @@ const EventListGuideDetailPage = () => {
     <div>
       <DetailHeader
         title={data.information.title}
-        date={data.information.createdAt.replaceAll("-", ".")}
+        date={"총학생회 ┃  " + data.information.createdAt.replaceAll("-", ".")}
       />
       <DetailContent
         images={data.information.images}

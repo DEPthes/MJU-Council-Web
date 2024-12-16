@@ -13,6 +13,7 @@ const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
   item,
 }) => {
   const [isShowContent, setIsShowContent] = useState<boolean>(false);
+  console.log(item);
   return (
     <S.Container>
       <S.titleContainer>

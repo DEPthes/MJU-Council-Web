@@ -51,6 +51,14 @@ export const Category = styled.p`
     margin-right: 8px;
 `;
 
+export const Category２ = styled.p`
+    display: flex;
+    color: var(--M70);
+    font: var(--Heading);
+    padding-right: 8px;
+    margin-right: 8px;
+`;
+
 export const Image = styled.div`
     display: flex;
     width: 100%;

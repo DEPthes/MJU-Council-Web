@@ -28,13 +28,17 @@ const StudentOrganization = () => {
   return (
     <S.All>
       {committees.map((committee, index) => (
+        committee.description==null &&
         <S.SODiv key={index}>
           <S.TextDiv>
             <S.TitleDiv>
               <S.Title>{committee.college}</S.Title>
             </S.TitleDiv>
             <S.ContentDiv>
-              <S.Category>학생회</S.Category>
+              {committee.name?
+                <S.Category>학생회</S.Category>:
+                <S.Category２>비상대책위원회</S.Category２>
+              }
               <S.Name>{committee.name}</S.Name>
               <S.SocialLinks>
                 {committee.snsUrl && (

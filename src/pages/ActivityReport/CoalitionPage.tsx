@@ -13,7 +13,6 @@ const CoalitionPage = () => {
 
   return (
     <S.Container>
-      {" "}
       {coalitionList.length > 0 ? (
         <S.ItemContainer>
           {coalitionList.slice(0, 8).map((coalition) => (

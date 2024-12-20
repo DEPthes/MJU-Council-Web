@@ -1,10 +1,41 @@
+import { useEffect, useState } from "react";
 import * as S from "../../../styles/Introduction/CentralCommitee/CentralCommiteeContent";
-
+import { getCommittees } from "@/apis/introduction";
 
 const CentralCommiteeContent = () => {
+    const [committees, setCommittees] = useState<any[]>([]);
+    
+    useEffect(() => {
+        const fetchCommittees = async () => {
+          try {
+            const data = await getCommittees();
+            if (data.check) {
+              setCommittees(data.information);
+            } else {
+              console.error("API 에러: 데이터를 가져오지 못했습니다.");
+            }
+          } catch (error) {
+            console.error("API 호출 에러:", error);
+          }
+        };
+    
+        fetchCommittees();
+      }, []);
+    
     return(
         <>
             <S.CDiv>
+                {committees.map((committee, index) => (
+                    committee.description!=null &&
+                    <S.SODiv key={index}>
+                    {committee.imgUrl && (
+                        <S.Image>
+                        <img src={committee.imgUrl}/>
+                        </S.Image>
+                    )}
+                    <S.TextDiv><S.SmallP>{committee.description}</S.SmallP></S.TextDiv>
+                    </S.SODiv>
+                ))}
                 <S.Content>
                     <S.PDiv>
                         <S.BigP>제30조(지위)</S.BigP>

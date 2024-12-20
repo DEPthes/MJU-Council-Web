@@ -6,38 +6,86 @@ import Instagram from "../../assets/image/Instagram.svg";
 import KakaoTalk from "../../assets/image/KakaoTalk.svg";
 import Mail from "../../assets/image/Mail.svg";
 import Phone from "../../assets/image/Phone.svg";
+import { useEffect, useState } from "react";
+import { getFooter } from "@/apis/home";
 
 const Footer = () => {
+  const [generation, setGeneration] = useState<number | string>(""); // 기수
+  const [name, setName] = useState<string>(""); // 총학생회명
+  const [email, setEmail] = useState<string>(""); // 이메일
+  const [snsUrl, setSnsUrl] = useState<string>(""); // SNS URL
+  const [imageFile, setImageFile] = useState<File | null>(null); // 이미지 파일
+  const [imageSrc, setImageSrc] = useState<string>(""); // 이미지 URL
+
+  // 데이터 가져오기
+  useEffect(() => {
+    const fetchFooterData = async () => {
+      try {
+        const data = await getFooter();
+        if (data.check) {
+          const { generation, name, email, snsUrl, image } = data.information;
+
+          setGeneration(generation || ""); // 기수
+          setName(name || ""); // 총학생회명
+          setEmail(email || ""); // 이메일
+          setSnsUrl(snsUrl || ""); // SNS URL
+
+          if (image) {
+            // 이미지 파일 객체가 들어오면 File 형태로 설정
+            const file = new File([image], "footer_image");
+            setImageFile(file);
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching footer data:", error);
+        alert("데이터를 불러오는 중 오류가 발생했습니다.");
+      }
+    };
+
+    fetchFooterData();
+  }, []);
+
+  // 이미지 URL 생성
+  useEffect(() => {
+    if (imageFile) {
+      const url = URL.createObjectURL(imageFile);
+      setImageSrc(url);
+
+      // URL 해제 (메모리 누수 방지)
+      return () => URL.revokeObjectURL(url);
+    }
+  }, [imageFile]);
+
   return (
     <>
       <S.Foot>
         <S.Top>
-          <S.Button href="https://www.instagram.com/mju_saero/">
-            <img src={Instagram} />
+          <S.Button href={snsUrl}>
+            <img src={Instagram} alt="Instagram" />
           </S.Button>
           <S.Button href="https://pf.kakao.com/_BtYfG?fbclid=PAY2xjawG1f95leHRuA2FlbQIxMAABpoCwBfu1h_6g6gqbGlKf8X26ko8oGwQzSsTPWQOh4IaVP7EBhTRh9wg4Aw_aem_apuNHZJ5TnMzhaoFiHI46w">
-            <img src={KakaoTalk} />
+            <img src={KakaoTalk} alt="KakaoTalk" />
           </S.Button>
         </S.Top>
         <S.Text style={{ font: "var(--Heading)", margin: "20px 0" }}>
-          명지대학교 인문캠퍼스 제51대 총학생회
+          명지대학교 인문캠퍼스 제{generation}대 총학생회 {name}
         </S.Text>
-        <S.CLogo src={Council_logo} />
+        <S.CLogo src={imageSrc || Council_logo} alt="Footer Logo" /> {/* 이미지 표시 */}
         <S.Divider>
-          <img src={Footer_divider} />
+          <img src={Footer_divider} alt="Divider" />
         </S.Divider>
         <S.Middle>
           <S.Img>
-            <img src={Phone} />
+            <img src={Phone} alt="Phone" />
           </S.Img>
           <S.Text style={{ font: "var(--Caption)", margin: "0 16px 0 0" }}>
             02-300-0901
           </S.Text>
           <S.Img>
-            <img src={Mail} />
+            <img src={Mail} alt="Mail" />
           </S.Img>
           <S.Text style={{ font: "var(--Caption)", margin: "0" }}>
-            mjusaero@gmail.com
+            {email}
           </S.Text>
         </S.Middle>
         <S.Text style={{ font: "var(--Caption)", margin: "12px 0 0 0" }}>

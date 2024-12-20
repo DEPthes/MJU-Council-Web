@@ -24,3 +24,10 @@ export const ItemContainer = styled.div`
     justify-self: end;
   }
 `;
+export const EmptyText = styled.p`
+  font: var(--BodyText);
+  color: var(--Black);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 160px;
+`;

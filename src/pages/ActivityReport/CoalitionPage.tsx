@@ -13,13 +13,17 @@ const CoalitionPage = () => {
 
   return (
     <S.Container>
-      <S.ItemContainer>
-        {coalitionList.slice(0, 8).map((coalition) => (
-          <CoalitionItem key={coalition.allianceId} item={coalition} />
-        ))}
-      </S.ItemContainer>
-
-      <PageComponent totalPage={totalPage} />
+      {" "}
+      {coalitionList.length > 0 ? (
+        <S.ItemContainer>
+          {coalitionList.slice(0, 8).map((coalition) => (
+            <CoalitionItem key={coalition.allianceId} item={coalition} />
+          ))}
+        </S.ItemContainer>
+      ) : (
+        <S.EmptyText>재휴현황이 없습니다.</S.EmptyText>
+      )}
+      {coalitionList.length > 0 && <PageComponent totalPage={totalPage} />}
     </S.Container>
   );
 };

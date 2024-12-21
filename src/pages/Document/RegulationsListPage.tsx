@@ -8,22 +8,28 @@ const RegulationsListPage = () => {
   const { data } = useAllRegulations();
 
   return (
-    <S.Container>
-      {data.information.contents.map((item, index) => {
-        return (
-          <RegulationsListItem
-            key={index}
-            index={index}
-            title={item.title}
-            date={item.date.split("T")[0].replaceAll("-", ".")}
-            fileUrl={item.fileUrls[0]}
-            onClick={() =>
-              navigate(`/document/regulations/${item.regulationId}`)
-            }
-          />
-        );
-      })}
-    </S.Container>
+    <>
+      {data.information.contents.length > 0 ? (
+        <S.Container>
+          {data.information.contents.map((item, index) => {
+            return (
+              <RegulationsListItem
+                key={index}
+                index={index}
+                title={item.title}
+                date={item.date.split("T")[0].replaceAll("-", ".")}
+                fileUrl={item.fileUrls[0]}
+                onClick={() =>
+                  navigate(`/document/regulations/${item.regulationId}`)
+                }
+              />
+            );
+          })}
+        </S.Container>
+      ) : (
+        <S.EmptyText>회칙 및 세칙이 없습니다.</S.EmptyText>
+      )}
+    </>
   );
 };
 

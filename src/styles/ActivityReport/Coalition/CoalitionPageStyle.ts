@@ -24,6 +24,7 @@ export const ItemContainer = styled.div`
     justify-self: end;
   }
 `;
+
 export const EmptyText = styled.p`
   font: var(--BodyText);
   color: var(--Black);

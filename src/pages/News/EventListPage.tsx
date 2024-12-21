@@ -1,6 +1,6 @@
 import EventListCard from "@/components/News/EventListCard";
 import { useEvents } from "@/hooks/event/useEvents";
-import * as S from "@styles/ActivityReport/Coalition/CoalitionPageStyle";
+import * as S from "@styles/Document/RegulationsListPageStyle";
 import { useNavigate } from "react-router-dom";
 
 const EventListPage = () => {
@@ -8,9 +8,9 @@ const EventListPage = () => {
   const { data } = useEvents();
 
   return (
-    <div style={{ marginBottom: 60 }}>
+    <>
       {data.information.length > 0 ? (
-        <>
+        <div style={{ marginBottom: 60 }}>
           {data.information.map((item, index) => {
             return (
               <EventListCard
@@ -26,11 +26,11 @@ const EventListPage = () => {
               />
             );
           })}
-        </>
+        </div>
       ) : (
         <S.EmptyText>행사가 없습니다.</S.EmptyText>
       )}
-    </div>
+    </>
   );
 };
 

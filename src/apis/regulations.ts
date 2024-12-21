@@ -4,14 +4,14 @@ import {
 } from "@/types/Document/regulations";
 import { api } from ".";
 
-// 학생회칙 전체 조회
+// 회칙 및 세칙 전체 조회
 export async function getRegulations(page: number): Promise<RegulationsList> {
   const response = await api.get(`/api/v1/regulations?page=${page}&size=10`);
 
   return response?.data;
 }
 
-// 학생회칙 page 구분 없이 전체 조회
+// 회칙 및 세칙 page 구분 없이 전체 조회
 export async function getAllRegulations(): Promise<RegulationsList> {
   const allData: RegulationsList = {
     check: true,
@@ -45,7 +45,7 @@ export async function getAllRegulations(): Promise<RegulationsList> {
   return allData;
 }
 
-// 학생회칙 상세 조회
+// 회칙 및 세칙 상세 조회
 export async function getRegulationsDetail(
   regulationsId: number
 ): Promise<RegulationsDetail> {

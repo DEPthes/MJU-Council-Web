@@ -17,6 +17,7 @@ export const Text = styled.p`
   overflow-wrap: break-word;
   white-space: normal;
   padding: 40px 20px;
+  white-space: pre-line;
   font: var(--BodyText);
 `;
 

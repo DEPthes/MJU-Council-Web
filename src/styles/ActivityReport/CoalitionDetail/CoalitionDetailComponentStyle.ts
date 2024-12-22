@@ -17,4 +17,5 @@ export const ImageContainer = styled.img`
 
 export const Text = styled.p`
   font: var(--bodyText);
+  white-space: pre-line;
 `;

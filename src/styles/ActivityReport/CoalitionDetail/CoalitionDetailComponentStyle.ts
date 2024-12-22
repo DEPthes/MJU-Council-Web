@@ -8,8 +8,9 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.img`
   display: flex;
-  width: max-content;
-  height: max-content;
+  width: 100%;
+  /* width: max-content;
+  height: max-content; */
   object-fit: cover;
   margin-bottom: 40px;
 `;

@@ -11,9 +11,12 @@ const BusinessDetailComponent: React.FC<BusinessDetailComponentProps> = ({
 }) => {
   return (
     <S.Container>
+      {businessInformation.images.map((image) => (
+        <S.ImageContainer src={image.url} key={image.id} />
+      ))}
       <S.Text>{businessInformation.content}</S.Text>
       {businessInformation.files.map((file) => (
-        <FileButton key={file.id} fileUrl={file.url} fileName={file.name} />
+        <FileButton key={file.id} fileUrl={file.url} fileName={file.url} />
       ))}
     </S.Container>
   );

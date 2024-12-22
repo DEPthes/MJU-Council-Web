@@ -5,7 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
   border-bottom: 1px solid var(--M5);
 `;
-
+export const ImageContainer = styled.img`
+  display: flex;
+  width: 100%;
+  /* width: max-content;
+  height: max-content; */
+  object-fit: cover;
+  margin-bottom: 40px;
+`;
 export const Text = styled.p`
   overflow-wrap: break-word;
   white-space: normal;

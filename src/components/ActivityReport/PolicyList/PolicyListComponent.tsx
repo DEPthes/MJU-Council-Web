@@ -19,7 +19,7 @@ const PolicyListComponent = () => {
     <S.Container>
       <ActivityReportHeader text={tab!} />
       {promiseList.map((promise, index) => (
-        <PolicyListPromiseComponent item={promise} key={index} />
+        <PolicyListPromiseComponent item={promise} index={index} key={index} />
       ))}
     </S.Container>
   );

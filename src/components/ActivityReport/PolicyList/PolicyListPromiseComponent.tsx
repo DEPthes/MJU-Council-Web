@@ -7,10 +7,12 @@ import React, { useState } from "react";
 
 interface PolicyListPromiseComponentProps {
   item: PromiseInformation;
+  index: number;
 }
 
 const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
   item,
+  index,
 }) => {
   const [isShowContent, setIsShowContent] = useState<boolean>(false);
   console.log(item);
@@ -18,7 +20,7 @@ const PolicyListPromiseComponent: React.FC<PolicyListPromiseComponentProps> = ({
     <S.Container>
       <S.titleContainer>
         <S.Title>
-          {item.promiseCategoryId}. {item.title}
+          {index + 1}. {item.title}
         </S.Title>
         <Arrow
           stroke="var(--Primary)"

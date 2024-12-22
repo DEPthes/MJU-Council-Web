@@ -34,7 +34,9 @@ const IntroductionContent = () => {
       {content.map((item, index) => (
         <S.ImgContent key={index} style={{ marginBottom: "16px" }}>
           <img src={item.imgUrl}/>
-          <S.ICP>{item.description}</S.ICP>
+          <S.ICP style={{ whiteSpace: "pre-line" }}>
+            {item.description}
+          </S.ICP>
         </S.ImgContent>
       ))}
     </S.ICDiv>

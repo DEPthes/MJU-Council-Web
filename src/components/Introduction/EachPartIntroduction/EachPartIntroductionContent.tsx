@@ -32,7 +32,7 @@ const EachPartIntroductionContent = () => {
       {links.map((item, index) => (
         <S.EPImgDiv key={index} style={{ marginBottom: "16px" }}>
           <S.EPImg src={item.imgUrl}/>
-          <S.EPP>{item.description}</S.EPP>
+          <S.EPP  style={{ whiteSpace: "pre-line" }}>{item.description}</S.EPP>
         </S.EPImgDiv>
       ))}
     </S.EPDiv>

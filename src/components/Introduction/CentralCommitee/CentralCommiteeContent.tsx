@@ -33,7 +33,7 @@ const CentralCommiteeContent = () => {
                         <img src={committee.imgUrl}/>
                         </S.Image>
                     )}
-                    <S.TextDiv><S.SmallP>{committee.description}</S.SmallP></S.TextDiv>
+                    <S.TextDiv><S.SmallP style={{ whiteSpace: "pre-line" }}>{committee.description}</S.SmallP></S.TextDiv>
                     </S.SODiv>
                 ))}
                 <S.Content>

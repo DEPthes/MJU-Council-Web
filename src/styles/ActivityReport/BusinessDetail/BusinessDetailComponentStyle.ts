@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 40px 20px;
   border-bottom: 1px solid var(--M5);
 `;
 export const ImageContainer = styled.img`
@@ -16,7 +17,6 @@ export const ImageContainer = styled.img`
 export const Text = styled.p`
   overflow-wrap: break-word;
   white-space: normal;
-  padding: 40px 20px;
   white-space: pre-line;
   font: var(--BodyText);
 `;

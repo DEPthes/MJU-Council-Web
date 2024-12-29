@@ -14,8 +14,7 @@ const Footer = () => {
   const [name, setName] = useState<string>(""); // 총학생회명
   const [email, setEmail] = useState<string>(""); // 이메일
   const [snsUrl, setSnsUrl] = useState<string>(""); // SNS URL
-  const [imageFile, setImageFile] = useState<File | null>(null); // 이미지 파일
-  const [imageSrc, setImageSrc] = useState<string>(""); // 이미지 URL
+  const [logoUrl, setLogoUrl] = useState<string | null>(null); // 이미지 파일
 
   // 데이터 가져오기
   useEffect(() => {
@@ -23,18 +22,20 @@ const Footer = () => {
       try {
         const data = await getFooter();
         if (data.check) {
-          const { generation, name, email, snsUrl, image } = data.information;
+          const { generation, name, email, snsUrl, logoUrl } = data.information;
 
           setGeneration(generation || ""); // 기수
           setName(name || ""); // 총학생회명
           setEmail(email || ""); // 이메일
           setSnsUrl(snsUrl || ""); // SNS URL
+          setLogoUrl(logoUrl || "");
 
-          if (image) {
-            // 이미지 파일 객체가 들어오면 File 형태로 설정
-            const file = new File([image], "footer_image");
-            setImageFile(file);
-          }
+          // if (logoUrl) {
+          //   // 이미지 파일 객체가 들어오면 File 형태로 설정
+          //   const file = new File([logoUrl], "footer_image");
+          //   setLogoUrl(file);
+          //   console.log(logoUrl);
+          // }
         }
       } catch (error) {
         console.error("Error fetching footer data:", error);
@@ -44,17 +45,6 @@ const Footer = () => {
 
     fetchFooterData();
   }, []);
-
-  // 이미지 URL 생성
-  useEffect(() => {
-    if (imageFile) {
-      const url = URL.createObjectURL(imageFile);
-      setImageSrc(url);
-
-      // URL 해제 (메모리 누수 방지)
-      return () => URL.revokeObjectURL(url);
-    }
-  }, [imageFile]);
 
   return (
     <>
@@ -70,7 +60,7 @@ const Footer = () => {
         <S.Text style={{ font: "var(--Heading)", margin: "20px 0" }}>
           명지대학교 인문캠퍼스 제{generation}대 총학생회 {name}
         </S.Text>
-        <S.CLogo src={imageSrc || Council_logo} alt="Footer Logo" /> {/* 이미지 표시 */}
+        <S.CLogo src={logoUrl || Council_logo} /> {/* 이미지 표시 */}
         <S.Divider>
           <img src={Footer_divider} alt="Divider" />
         </S.Divider>
